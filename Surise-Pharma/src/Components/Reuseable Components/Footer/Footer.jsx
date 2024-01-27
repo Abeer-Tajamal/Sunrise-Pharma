@@ -3,7 +3,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <>
-      <div className="footerContainer" style={{ border: "2px solid red" }}>
+      <div className="footerContainer">
         <div className="leftContent">
           <ul>
             <li>Home</li>

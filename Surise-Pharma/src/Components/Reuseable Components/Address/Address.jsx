@@ -4,16 +4,7 @@ const Address = () => {
   return (
     <>
       <div
-        className="container"
-        // style={{
-        //   backgroundColor: "#0D58A6",
-        //   color: "white",
-        //   display: "flex",
-        //   alignItems: "center",
-        //   justifyContent: "space-around",
-        //   height: "50px",
-        // }}
-      >
+        className="container">
         <div>
           <a
             href="https://goo.gl/maps/gRCqUduCEt3FBXvn6"

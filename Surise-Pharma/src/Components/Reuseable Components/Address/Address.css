@@ -1,0 +1,8 @@
+.container {
+  background-color: "#0D58A6";
+  color: "white";
+  display: "flex";
+  align-items: "center";
+  justify-content: "space-around";
+  height: "50px";
+}

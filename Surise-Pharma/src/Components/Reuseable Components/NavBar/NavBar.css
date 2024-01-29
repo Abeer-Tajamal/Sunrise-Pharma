@@ -1,0 +1,49 @@
+.outerContainer {
+  @media (max-width: 1279px) {
+    height: 10px;
+  }
+}
+
+.wrapper {
+  @media (max-width: 1279px) {
+    top: 40px;
+    position: fixed;
+    flex-flow: column;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    transition: transform 0.5s;
+    z-index: 100;
+    background-color: black;
+  }
+}
+
+.firstUl {
+  & > li {
+    font-family: Montserrat;
+    & > ul {
+      display: none;
+    }
+
+    :hover {
+      & > ul {
+        display: block;
+      }
+    }
+  }
+}
+
+.secondUl {
+  & > li {
+    font-family: Montserrat;
+    & > ul {
+      display: none;
+    }
+
+    :hover {
+      & > ul {
+        display: block;
+      }
+    }
+  }
+}

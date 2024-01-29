@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <>
-      <a
-        href="https://www.sunrisepharmrx.com/coronavirus"
+      <span
         target="_blank"
         style={{
           color: "rgba(255,255,255)",
@@ -14,8 +15,13 @@ const Home = () => {
         }}
       >
         Interested in the COVID-19 Vaccine?
-        <span style={{ textDecoration: "underline" }}>Get on the waitlist</span>
-      </a>
+        <Link
+          to="/coronavirus"
+          style={{ textDecoration: "underline", color: "white" }}
+        >
+          Get on the waitlist
+        </Link>
+      </span>
     </>
   );
 };

@@ -1,14 +1,13 @@
-import Home from "./Components/Home";
-import Address from "./Components/Reuseable Components/Address/Address";
-import Footer from "./Components/Reuseable Components/Footer/Footer";
+import HomePage from "./Components/Pages/HomePage";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <Home />
-      <Address />
-      <Footer />
-    </>
+    <HashRouter>
+      <Routes>
+        <Route excat path="/" element={<HomePage />} />
+      </Routes>
+    </HashRouter>
   );
 }
 

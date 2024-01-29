@@ -5,7 +5,9 @@ import NavBar from "../Reuseable Components/NavBar/NavBar";
 import OutlinedCard from "../Cards/OutlinedCard";
 import SimpleSlider from "../Slider/SimpleSlider";
 import MediaCard from "../Cards/MediaCard" ;
-import Testimonals from "../Cards/Testimonial"
+import Testimonals from "../Cards/Testimonial";
+import Services from "../Cards/ServiceCard";
+
 
 const HomePage = () => {
   return (
@@ -16,7 +18,8 @@ const HomePage = () => {
       <SimpleSlider />
       {/* <OutlinedCard /> */}
       {/* <MediaCard /> */}
-      {/* <Testimonals /> */}
+      {/* <Testimonals />
+      <Services /> */}
       <Footer />
     </>
   );

@@ -8,6 +8,8 @@ const MediaCard = ({ image, title, description }) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
+        style={{background:"#7FC602"}}
+        component="img"
         sx={{ height: 140 }}
         image={image}
         title={title}

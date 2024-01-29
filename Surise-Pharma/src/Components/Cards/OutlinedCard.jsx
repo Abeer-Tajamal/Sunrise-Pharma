@@ -26,13 +26,24 @@ const OutlinedCard = () => {
   };
 
   return (
-    <Box sx={{ maxWidth: 275 }}>
-      <Card variant="outlined">
-        <CustomCard {...cardProps1} />
-        <CustomCard {...cardProps2} />
-        <CustomCard {...cardProps3} />
-      </Card>
-    </Box>
+    <div style={{ display: "flex", justifyContent: "space-around" }}>
+      <Box sx={{ maxWidth: 275 }}>
+        <Card variant="outlined">
+          <CustomCard {...cardProps1} />
+        </Card>
+      </Box>
+      <Box sx={{ maxWidth: 275 }}>
+        <Card variant="outlined">
+          <CustomCard {...cardProps2} />
+        </Card>
+      </Box>
+      <Box sx={{ maxWidth: 275 }}>
+        <Card variant="outlined">
+          <CustomCard {...cardProps3} />
+        </Card>
+      </Box>
+    </div>
+
   );
 };
 

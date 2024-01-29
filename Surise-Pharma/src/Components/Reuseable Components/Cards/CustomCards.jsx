@@ -9,7 +9,7 @@ const CustomCard = ({ title, description, buttonText, buttonLink }) => {
         <>
             <CardContent>
                 <Typography variant="h5" component="div">
-                    <h2><a href={buttonLink}>{title}</a></h2>
+                    <h3><a href={buttonLink}>{title}</a></h3>
                 </Typography>
                 <Typography variant="body2">
                     {description}

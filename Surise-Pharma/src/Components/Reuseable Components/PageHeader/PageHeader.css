@@ -1,0 +1,7 @@
+.pageHeading {
+    background-color: #7FC602;
+    display: flex;
+    justify-content: left;
+    height: '100%';
+    color: white;
+}

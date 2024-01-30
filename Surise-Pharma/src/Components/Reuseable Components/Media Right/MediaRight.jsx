@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './MediaRight.css';
 
 const ImageDetails = ({ image, title, description }) => {
@@ -16,10 +15,5 @@ const ImageDetails = ({ image, title, description }) => {
   );
 };
 
-ImageDetails.propTypes = {
-  image: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-};
 
 export default ImageDetails;

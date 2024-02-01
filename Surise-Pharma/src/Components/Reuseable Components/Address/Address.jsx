@@ -6,44 +6,37 @@ import "./Address.css";
 
 const Address = () => {
   return (
-    <>
-      <div className="container">
-        <div>
-          <div className="flexDisplay">
-            <LocationOnIcon fontSize="small" />
-            <Link
-              to="https://goo.gl/maps/gRCqUduCEt3FBXvn6"
-              target="_blank"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              <strong className="underlineText">
-                240 Indian River Rd Orange, CT 0647
-              </strong>
-            </Link>
-          </div>
-        </div>
-        <div>
-          <div className="flexDisplay">
-            <PhoneIcon fontSize="small" />
-            <strong>Phone: </strong>
-            <Link
-              to="tel:475-209-9284"
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              <span className="underlineText">475-209-9284</span>
-            </Link>
-          </div>
-        </div>
-        <div>
-          <div className="flexDisplay">
-            <AccessTimeIcon fontSize="small" />
-            <strong>
-              Mon-Fri: 9a.m.-6p.m. | Sat: 9a.m.-2p.m. | Sun: Closed
-            </strong>
-          </div>
-        </div>
+    <div className="container">
+      <div className="flexDisplay">
+        <LocationOnIcon fontSize="small" />
+        <Link
+          to="https://goo.gl/maps/gRCqUduCEt3FBXvn6"
+          target="_blank"
+          className="map-link"
+        >
+          <strong className="underlineText">
+            240 Indian River Rd Orange, CT 0647
+          </strong>
+        </Link>
       </div>
-    </>
+
+      <div className="flexDisplay">
+        <PhoneIcon fontSize="small" />
+        <strong>
+          &nbsp;Phone:&nbsp;
+          <Link to="tel:475-209-9284" className="map-link">
+            <span className="underlineText">475-209-9284</span>
+          </Link>
+        </strong>
+      </div>
+
+      <div className="flexDisplay">
+        <AccessTimeIcon fontSize="small" />
+        <strong>
+          Mon-Fri: 9a.m.-6p.m. | Sat: 9a.m.-2p.m. | Sun: Closed
+        </strong>
+      </div>
+    </div>
   );
 };
 

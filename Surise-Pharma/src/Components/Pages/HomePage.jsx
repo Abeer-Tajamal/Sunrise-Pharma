@@ -14,7 +14,7 @@ const HomePage = () => {
     <>
       <Home />
       <Address />
-      {/* <NavBar /> */}
+      <NavBar />
       <br />
       <SimpleSlider />
       <br />

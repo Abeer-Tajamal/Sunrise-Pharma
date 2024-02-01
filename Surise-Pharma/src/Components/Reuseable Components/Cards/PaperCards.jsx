@@ -7,7 +7,7 @@ import Grid from "@mui/material/Grid";
 const StyledItem = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(1),
   textAlign: "center",
-  margin: "0 0 20px 0",
+  margin: "0 70px 50px 70px",
   boxShadow: "0 10px 20px 0 rgba(0,0,0,0.3)",
 }));
 

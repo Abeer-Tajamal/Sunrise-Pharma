@@ -5,6 +5,7 @@ import AboutCards from "../Cards/About Card/AboutCard";
 import MediaRight from "../Reuseable Components/Media Right/MediaRight";
 import Footer from "../Reuseable Components/Footer/Footer";
 import DynamicPageTitle from "../Reuseable Components/DynamicPageTitle/DynamicPageTitle";
+import Navbar from "../Reuseable Components/NavBar/NavBar";
 
 const AboutUsPage = () => {
   DynamicPageTitle(
@@ -23,6 +24,7 @@ const AboutUsPage = () => {
     <>
       <Home />
       <Address />
+      <Navbar />
       <PageHeader heading="About Us" />
       <AboutCards />
       <MediaRight {...imageDetails} />

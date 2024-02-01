@@ -4,6 +4,7 @@ import MediaRight from "../Reuseable Components/Media Right/MediaRight";
 import DynamicPageTitle from "../Reuseable Components/DynamicPageTitle/DynamicPageTitle";
 import Footer from "../Reuseable Components/Footer/Footer";
 import "./InsurancePage.css";
+import Navbar from "../Reuseable Components/NavBar/NavBar";
 
 const InsurancePage = () => {
   DynamicPageTitle("Sunrise Pharmacy - Your Local Orange Pharmacy");
@@ -29,6 +30,7 @@ const InsurancePage = () => {
     <>
       <Home />
       <Address />
+      <Navbar />
       <div className="containerMedia">
         <MediaRight {...insuranceDetails} />
       </div>

@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route excat path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutUsPage />} />
+        <Route path="/about-us" element={<AboutUsPage />} />
         <Route path="/contact" element={<ContactUsPage />} />
         <Route path="/insurance" element={<InsurancePage />} />
       </Routes>

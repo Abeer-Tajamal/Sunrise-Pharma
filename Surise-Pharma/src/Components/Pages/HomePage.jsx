@@ -7,6 +7,7 @@ import SimpleSlider from "../Slider/SimpleSlider";
 import MediaCard from "../Cards/MediaCard/MediaCard";
 import Testimonals from "../Cards/Testimonial/Testimonial";
 import Services from "../Cards/ServiceCard";
+import TestimonialHeader from '../Reuseable Components/PageHeader/PageHeader';
 
 const HomePage = () => {
   return (
@@ -19,6 +20,7 @@ const HomePage = () => {
       <br />
       <OutlinedCard />
       <MediaCard />
+      <TestimonialHeader heading="Read Our Patient Reviews" />
       <Testimonals />
       <Services />
       <Footer />

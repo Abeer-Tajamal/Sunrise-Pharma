@@ -6,3 +6,21 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha (fourth value) for transparency */
 }
+.background-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  font-size: 36px;
+}
+.overlay h2 {
+  margin: 0;
+}
+.overlay p {
+  text-align: center;
+}

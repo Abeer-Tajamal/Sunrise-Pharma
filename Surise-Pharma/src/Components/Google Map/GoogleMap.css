@@ -1,0 +1,9 @@
+.containerMap {
+  padding: 50px 50px 50px 50px;
+}
+
+.mapCSSSettings {
+  height: 700px;
+  width: 100%;
+  border: none;
+}

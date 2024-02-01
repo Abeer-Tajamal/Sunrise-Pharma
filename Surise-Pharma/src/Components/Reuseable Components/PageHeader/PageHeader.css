@@ -1,7 +1,8 @@
 .pageHeading {
-    background-color: #7FC602;
-    display: flex;
-    justify-content: left;
-    height: '100%';
-    color: white;
+  background-color: #7fc602;
+  display: flex;
+  justify-content: center;
+  height: "100%";
+  color: white;
+  margin: 50px;
 }

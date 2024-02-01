@@ -1,12 +1,14 @@
-import React from 'react';
-import { styled } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
+import React from "react";
+import { styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
 
 const StyledItem = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(1),
-  textAlign: 'center'
+  textAlign: "center",
+  margin: "0 0 20px 0",
+  boxShadow: "0 10px 20px 0 rgba(0,0,0,0.3)",
 }));
 
 const CustomGridItem = ({ xs, md, title, content }) => (

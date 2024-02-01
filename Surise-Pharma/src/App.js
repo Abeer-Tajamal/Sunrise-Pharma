@@ -1,15 +1,19 @@
 import HomePage from "./Components/Pages/HomePage";
 import AboutUsPage from "./Components/Pages/AboutUsPage";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import InsurancePage from "./Components/Pages/InsurancePage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ContactUsPage from "./Components/Pages/ContactUsPage";
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route excat path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutUsPage />} />
+        <Route path="/contact" element={<ContactUsPage />} />
+        <Route path="/insurance" element={<InsurancePage />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 

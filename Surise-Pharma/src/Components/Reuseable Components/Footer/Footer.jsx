@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import Button from "@mui/material/Button";
+import FacebookIcon from "@mui/icons-material/Facebook";
 import "./Footer.css";
 
 const Footer = () => {
   return (
     <>
       <div className="footerContainer">
-        <div className="leftContent">
+        <div>
           <ul>
             <li>
               <strong>Quick Links</strong>
@@ -30,7 +31,10 @@ const Footer = () => {
               </Link>
             </li>
             <li className="underlineText">
-              <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+              <Link
+                to="/contact"
+                style={{ textDecoration: "none", color: "white" }}
+              >
                 Contact
               </Link>
             </li>
@@ -55,6 +59,15 @@ const Footer = () => {
           <ul>
             <li>
               <strong>Contact Us</strong>
+            </li>
+            <li>
+              <Link
+                to="https://www.facebook.com/people/Sunrise-Pharmacy/100066406663162/"
+                target="_blank"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                <FacebookIcon />
+              </Link>
             </li>
             <li>
               Phone:

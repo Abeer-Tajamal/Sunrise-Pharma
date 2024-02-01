@@ -64,61 +64,38 @@
 //   );
 // }
 
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/swiper-bundle.min.css";
+import React from 'react';
+import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
+import "./SimpleSlider.css"
 
-const Slider = () => {
-  const slides = [
-    {
-      // image: "./Asserts/Home Page/Welocme to Sunrise Phasrmacy.jpg",
-      text: "Slide 1 text",
-    },
-    {
-      image: "image_url_2",
-      text: "Slide 2 text",
-    },
-    {
-      image: "image_url_3",
-      text: "Slide 3 text",
-    },
-    {
-      image: "image_url_4",
-      text: "Slide 4 text",
-    },
-    {
-      image: "image_url_5",
-      text: "Slide 5 text",
-    },
+const MyCarousel = () => {
+  const slideStyles = [
+    { backgroundImage: 'url("./Assets/Home Page/Become an insider.jpg")', link:"https://www.google.com/" },
+    { backgroundImage: 'url("https://placekitten.com/801/300")' },
+    { backgroundImage: 'url("https://placekitten.com/802/300")' },
   ];
 
   return (
-    <Swiper
-      spaceBetween={50}
-      slidesPerView={1}
-      onSlideChange={() => console.log("slide change")}
+    <CarouselProvider
+      naturalSlideWidth={100}
+      naturalSlideHeight={30}
+      totalSlides={3}
+      isPlaying
+      interval={2000}
     >
-      {slides.map((slide, index) => (
-        <SwiperSlide key={index}>
-          <div
-            style={{
-              backgroundImage: `url(${slide.image})`,
-              backgroundSize: "cover",
-              height: "300px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              color: "white",
-              fontSize: "24px",
-              fontWeight: "bold",
-            }}
-          >
-            {slide.text}
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+      <Slider>
+        {slideStyles.map((style, index) => (
+          <Slide key={index} index={index} style={style}>
+            <div className="overlay">
+              {/* You can add content inside the Slide if needed */}
+              {/* <div>Your content here</div> */}
+              </div>
+          </Slide>
+        ))}
+      </Slider>
+    </CarouselProvider>
   );
 };
 
-export default Slider;
+export default MyCarousel;

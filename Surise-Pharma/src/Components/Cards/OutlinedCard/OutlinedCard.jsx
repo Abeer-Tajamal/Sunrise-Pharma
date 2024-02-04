@@ -10,7 +10,8 @@ const OutlinedCard = () => {
     description:
       "We fill new and existing prescriptions in-store, by phone and online for your convenience.",
     buttonText: "Refill Now",
-    buttonLink: "/account"
+    buttonLink: "/account",
+    buttonTarget:"_blank"
   };
 
   const cardProps2 = {

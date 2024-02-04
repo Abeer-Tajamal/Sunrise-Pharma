@@ -1,0 +1,15 @@
+.top-media {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    border: 2px solid lightgray;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}

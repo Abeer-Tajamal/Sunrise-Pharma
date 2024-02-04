@@ -9,6 +9,8 @@ import CareBeyondDrugs from "../Care Beyond Drugs/CareBeyondDrugs";
 import Testimonals from "../Cards/Testimonial/Testimonial";
 import Services from "../Cards/ServiceCard";
 import TestimonialHeader from '../Reuseable Components/PageHeader/PageHeader';
+import HearFromYou from '../Hear From You/HearFromYou'
+import PharmacyInsider from "../Pharmacy Insider/PharmacyInsider";
 
 const HomePage = () => {
   return (
@@ -21,10 +23,12 @@ const HomePage = () => {
       <br />
       <OutlinedCard />
       <MediaCard />
+      <PharmacyInsider />
       <CareBeyondDrugs />
       <TestimonialHeader heading="Read Our Patient Reviews" />
       <Testimonals />
       <Services />
+      <HearFromYou />
       <Footer />
     </>
   );

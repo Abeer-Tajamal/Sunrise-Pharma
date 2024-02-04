@@ -1,0 +1,20 @@
+.insider-section {
+    display: flex;
+    background-image: url("../../../public/Assets/Home Page/Become an insider.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    justify-content: center;
+    color: #fff;
+    min-height: 350px;
+}
+
+.insider-section div {
+    text-align: center;
+    align-items: center;
+}
+
+.insider-section input {
+    height: 35px;
+    width: 250px;
+}

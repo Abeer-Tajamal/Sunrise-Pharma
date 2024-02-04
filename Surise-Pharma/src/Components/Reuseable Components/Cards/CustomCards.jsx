@@ -4,7 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import ColorButtons from "../Button/button";
 
-const CustomCard = ({ title, description, buttonText, buttonLink }) => {
+const CustomCard = ({ title, description, buttonText, buttonLink, buttonTarget }) => {
   return (
     <>
       <CardContent
@@ -29,7 +29,7 @@ const CustomCard = ({ title, description, buttonText, buttonLink }) => {
           justifyContent: "center",
         }}
       >
-        <ColorButtons buttonLink={buttonLink} label={buttonText} />
+        <ColorButtons buttonTarget={buttonTarget} buttonLink={buttonLink} label={buttonText} />
       </CardActions>
     </>
   );

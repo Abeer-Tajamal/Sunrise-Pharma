@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
+import ColorButtons from "../Button/button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -124,8 +125,8 @@ const Navbar = () => {
           </div>
         </div>
         <div className="bottomLeft-container">
-          <button className="button-colored">Refill</button>
-          <button className="button-colored">Transfer a Prescription</button>
+          <ColorButtons buttonLink="/refill" label="Refill" />
+          <ColorButtons buttonLink="/pharmacy-near-me-orange-ct" label="Transfer a Prescription" />
         </div>
       </div>
     </nav>

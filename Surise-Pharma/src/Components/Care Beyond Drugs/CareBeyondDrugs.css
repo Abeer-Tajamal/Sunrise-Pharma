@@ -1,0 +1,23 @@
+.CareSection {
+    background-color: #dbf2f8;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.CareSection h2,
+.CareSection p {
+    margin: 0 70px
+}
+
+.mediaRight {
+    display: flex;
+    margin: 50px 70px;
+}
+
+.round-image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 10px 20px 0 rgba(39, 38, 38, 0.3);
+    margin: 0 50px;
+}

@@ -5,6 +5,7 @@ import NavBar from "../Reuseable Components/NavBar/NavBar";
 import OutlinedCard from "../Cards/OutlinedCard/OutlinedCard";
 import SimpleSlider from "../Slider/SimpleSlider";
 import MediaCard from "../Cards/MediaCard/MediaCard";
+import CareBeyondDrugs from "../Care Beyond Drugs/CareBeyondDrugs";
 import Testimonals from "../Cards/Testimonial/Testimonial";
 import Services from "../Cards/ServiceCard";
 import TestimonialHeader from '../Reuseable Components/PageHeader/PageHeader';
@@ -20,6 +21,7 @@ const HomePage = () => {
       <br />
       <OutlinedCard />
       <MediaCard />
+      <CareBeyondDrugs />
       <TestimonialHeader heading="Read Our Patient Reviews" />
       <Testimonals />
       <Services />

@@ -1,8 +1,8 @@
 import React from "react";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import ColorButtons from "../Button/button";
 
 const CustomCard = ({ title, description, buttonText, buttonLink }) => {
   return (
@@ -29,18 +29,7 @@ const CustomCard = ({ title, description, buttonText, buttonLink }) => {
           justifyContent: "center",
         }}
       >
-        <Button
-          size="small"
-          href={buttonLink}
-          style={{
-            color: "white",
-            backgroundColor: "#7fc602",
-            border: "2x solid #dbf2f8",
-            boxShadow: "0 10px 20px 0 rgba(0,0,0,0.3)",
-          }}
-        >
-          {buttonText}
-        </Button>
+        <ColorButtons buttonLink={buttonLink} label={buttonText} />
       </CardActions>
     </>
   );

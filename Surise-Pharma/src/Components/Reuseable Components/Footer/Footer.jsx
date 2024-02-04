@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import Button from "@mui/material/Button";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import "./Footer.css";
+import ColorButtons from "../Button/button"
 
 const Footer = () => {
   return (
@@ -100,15 +100,7 @@ const Footer = () => {
             </li>
             <br />
             <li>
-              <Button variant="contained" color="success">
-                <Link
-                  to="http://search.google.com/local/writereview?placeid=ChIJdenmwm116IkRQ_JDQmbs_4U"
-                  style={{ textDecoration: "none", color: "white" }}
-                  target="_blank"
-                >
-                  Submit a Review
-                </Link>
-              </Button>
+              <ColorButtons buttonTarget="_blank" buttonLink="http://search.google.com/local/writereview?placeid=ChIJdenmwm116IkRQ_JDQmbs_4U" label="Submit a Review" />
             </li>
           </ul>
         </div>

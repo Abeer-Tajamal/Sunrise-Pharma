@@ -67,7 +67,16 @@ const Navbar = () => {
             </button>
             {isOpen && (
               <ul className="dropdown-menu">
-                <li>Option 1</li>
+                <Link
+                  to="/pharmacy"
+                  onClick={() => handleTabClick("Pharmacy")}
+                  style={{
+                    textDecoration: "none",
+                    color: selectedTab === "Pharmacy" ? "#7FC602" : "#0d58a6",
+                  }}
+                >
+                  <li>Pharmacy</li>
+                </Link>
                 <li>Option 2</li>
                 <li>Option 3</li>
               </ul>
@@ -126,7 +135,10 @@ const Navbar = () => {
         </div>
         <div className="bottomLeft-container">
           <ColorButtons buttonLink="/refill" label="Refill" />
-          <ColorButtons buttonLink="/pharmacy-near-me-orange-ct" label="Transfer a Prescription" />
+          <ColorButtons
+            buttonLink="/pharmacy-near-me-orange-ct"
+            label="Transfer a Prescription"
+          />
         </div>
       </div>
     </nav>

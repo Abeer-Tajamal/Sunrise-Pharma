@@ -1,0 +1,19 @@
+.outer-container {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.left-image-div {
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #7fc602;
+  margin-right: 30px;
+}
+
+.inner-Image {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}

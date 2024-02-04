@@ -19,14 +19,17 @@ const Footer = () => {
             </li>
             <li className="underlineText">
               <Link
-                to="/about"
+                to="/about-us"
                 style={{ textDecoration: "none", color: "white" }}
               >
                 About
               </Link>
             </li>
             <li className="underlineText">
-              <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+              <Link
+                to="/pharmacy"
+                style={{ textDecoration: "none", color: "white" }}
+              >
                 Service
               </Link>
             </li>

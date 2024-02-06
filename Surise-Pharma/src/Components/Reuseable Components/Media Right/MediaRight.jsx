@@ -1,13 +1,14 @@
 import React from "react";
 import "./MediaRight.css";
 
-const ImageDetails = ({ image, title, description, description2, array }) => {
+const ImageDetails = ({ image, title, description, description2, description3, array }) => {
   return (
     <div className="image-details">
       <div className="image-details__details">
         <h2 className="image-details__title">{title}</h2>
         <p className="image-details__description">{description}</p>
         <p className="image-details__description">{description2}</p>
+        <p className="image-details__description">{description3}</p>
         {/* <ul>
           {array.map((insurance, index) => (
             <li key={index}>{insurance}</li>

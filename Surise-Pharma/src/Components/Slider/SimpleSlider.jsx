@@ -19,7 +19,7 @@ const MyCarousel = () => {
     },
     {
       backgroundImage: 'url("./Assets/Home Page/Diabetes Care.jpeg")',
-      link: "/diabetes-specalized-care-center",
+      link: "/diabetes-specialized-care-center",
       title: 'Diabetes Care',
       description: 'Let us help you understand and manage your diabetes'
     },

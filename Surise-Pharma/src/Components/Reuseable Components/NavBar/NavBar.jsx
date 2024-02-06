@@ -77,8 +77,136 @@ const Navbar = () => {
                 >
                   <li>Pharmacy</li>
                 </Link>
-                <li>Option 2</li>
-                <li>Option 3</li>
+                <Link
+                  to="/covid-19-testing"
+                  onClick={() => handleTabClick("COVID-19 Testing")}
+                  style={{
+                    textDecoration: "none",
+                    color: selectedTab === "COVID-19 Testing" ? "#7FC602" : "#0d58a6",
+                  }}
+                >
+                  <li>COVID-19 Testing</li>
+                </Link>
+                <Link
+                  to="/diabetes-specialized-care-center"
+                  onClick={() => handleTabClick("Diabetes Specialized Care Center")}
+                  style={{
+                    textDecoration: "none",
+                    color: selectedTab === "Diabetes Specialized Care Center" ? "#7FC602" : "#0d58a6",
+                  }}
+                >
+                  <li>Diabetes Specialized Care Center</li>
+                </Link>
+                <Link
+                  to="/med-pre-pours"
+                  onClick={() => handleTabClick("Med Pre-Pours")}
+                  style={{
+                    textDecoration: "none",
+                    color: selectedTab === "Med Pre-Pours" ? "#7FC602" : "#0d58a6",
+                  }}
+                >
+                  <li>Med Pre-Pours</li>
+                </Link>
+                <Link
+                  to="/durable-medical-equipment"
+                  onClick={() => handleTabClick("Durable Medical Equipment")}
+                  style={{
+                    textDecoration: "none",
+                    color: selectedTab === "Durable Medical Equipment" ? "#7FC602" : "#0d58a6",
+                  }}
+                >
+                  <li>Durable Medical Equipment</li>
+                </Link>
+                <Link
+                  to="/erectile-dysfunction"
+                  onClick={() => handleTabClick("Erectile Dysfunction")}
+                  style={{
+                    textDecoration: "none",
+                    color: selectedTab === "Erectile Dysfunction" ? "#7FC602" : "#0d58a6",
+                  }}
+                >
+                  <li>Erectile Dysfunction</li>
+                </Link>
+                <Link
+                  to="/health-screenings"
+                  onClick={() => handleTabClick("Health Screenings")}
+                  style={{
+                    textDecoration: "none",
+                    color: selectedTab === "Health Screenings" ? "#7FC602" : "#0d58a6",
+                  }}
+                >
+                  <li>Health Screenings</li>
+                </Link>
+                <Link
+                  to="/immunizations"
+                  onClick={() => handleTabClick("Immunizations")}
+                  style={{
+                    textDecoration: "none",
+                    color: selectedTab === "Immunizations" ? "#7FC602" : "#0d58a6",
+                  }}
+                >
+                  <li>Immunizations</li>
+                </Link>
+                <Link
+                  to="/leader-products"
+                  onClick={() => handleTabClick("LEADER™ Products")}
+                  style={{
+                    textDecoration: "none",
+                    color: selectedTab === "LEADER™ Products" ? "#7FC602" : "#0d58a6",
+                  }}
+                >
+                  <li>LEADER™ Products</li>
+                </Link>
+                <Link
+                  to="/medication-adherence"
+                  onClick={() => handleTabClick("Medication Adherence")}
+                  style={{
+                    textDecoration: "none",
+                    color: selectedTab === "Medication Adherence" ? "#7FC602" : "#0d58a6",
+                  }}
+                >
+                  <li>Medication Adherence</li>
+                </Link>
+                <Link
+                  to="/medication-synchronization"
+                  onClick={() => handleTabClick("Medication Synchronization")}
+                  style={{
+                    textDecoration: "none",
+                    color: selectedTab === "Medication Synchronization" ? "#7FC602" : "#0d58a6",
+                  }}
+                >
+                  <li>Medication Synchronization</li>
+                </Link>
+                <Link
+                  to="/medication-therapy-management"
+                  onClick={() => handleTabClick("Medication Therapy Management")}
+                  style={{
+                    textDecoration: "none",
+                    color: selectedTab === "Medication Therapy Management" ? "#7FC602" : "#0d58a6",
+                  }}
+                >
+                  <li>Medication Therapy Management</li>
+                </Link>
+                <Link
+                  to="/nutrient-depletion-counseling"
+                  onClick={() => handleTabClick("Nutrient Depletion Counseling")}
+                  style={{
+                    textDecoration: "none",
+                    color: selectedTab === "Nutrient Depletion Counseling" ? "#7FC602" : "#0d58a6",
+                  }}
+                >
+                  <li>Nutrient Depletion Counseling</li>
+                </Link>
+                <Link
+                  to="/home-delivery"
+                  onClick={() => handleTabClick("Home Delivery")}
+                  style={{
+                    textDecoration: "none",
+                    color: selectedTab === "Home Delivery" ? "#7FC602" : "#0d58a6",
+                  }}
+                >
+                  <li>Home Delivery</li>
+                </Link>
               </ul>
             )}
           </div>

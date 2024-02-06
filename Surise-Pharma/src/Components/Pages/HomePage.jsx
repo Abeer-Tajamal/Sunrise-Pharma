@@ -8,8 +8,8 @@ import MediaCard from "../Cards/MediaCard/MediaCard";
 import CareBeyondDrugs from "../Care Beyond Drugs/CareBeyondDrugs";
 import Testimonals from "../Cards/Testimonial/Testimonial";
 import Services from "../Cards/ServiceCard";
-import TestimonialHeader from '../Reuseable Components/PageHeader/PageHeader';
-import HearFromYou from '../Hear From You/HearFromYou'
+import TestimonialHeader from "../Reuseable Components/PageHeader/PageHeader";
+import HearFromYou from "../Hear From You/HearFromYou";
 import PharmacyInsider from "../Pharmacy Insider/PharmacyInsider";
 
 const HomePage = () => {
@@ -20,7 +20,6 @@ const HomePage = () => {
       <NavBar />
       <br />
       <SimpleSlider />
-      <br />
       <OutlinedCard />
       <MediaCard />
       <PharmacyInsider />

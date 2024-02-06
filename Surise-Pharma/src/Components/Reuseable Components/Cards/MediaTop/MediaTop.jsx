@@ -6,8 +6,9 @@ const MediaTop = ({ imgSrc, imgLink, btnName, content }) => {
     <div className="container-media">
       <div className="media-top">
         <div className="image-div">
-          <Link to={imgLink} style={{ textDecoration: "none" }} />
-          <img src={imgSrc} alt="COVID-19 Testing" className="inner-image" />
+          <Link to={imgLink} style={{ textDecoration: "none" }}>
+            <img src={imgSrc} alt="COVID-19 Testing" className="inner-image" />
+          </Link>
         </div>
         <Link to={imgLink}>
           <button

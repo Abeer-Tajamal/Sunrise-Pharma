@@ -1,15 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
 import ColorButtons from "../Button/button";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedTab, setSelectedTab] = useState("Home");
+  const dropdownRef = useRef(null);
 
   const handleTabClick = (tab) => {
     setSelectedTab(tab);
   };
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    // Add event listener when the dropdown menu is opened
+    if (isOpen) {
+      document.addEventListener("mousedown", handleOutsideClick);
+    } else {
+      // Remove event listener when the dropdown menu is closed
+      document.removeEventListener("mousedown", handleOutsideClick);
+    }
+
+    // Clean up the event listener on component unmount
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [isOpen]);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -55,7 +78,7 @@ const Navbar = () => {
               </button>
             </Link>
           </div>
-          <div className="dropdown" onClick={toggleDropdown}>
+          <div className="dropdown" ref={dropdownRef} onClick={toggleDropdown}>
             <button
               className="dropdown-toggle"
               onClick={() => handleTabClick("Services")}
@@ -65,6 +88,7 @@ const Navbar = () => {
             >
               Services
             </button>
+            <ArrowDropDownIcon />
             {isOpen && (
               <ul className="dropdown-menu">
                 <Link
@@ -82,17 +106,25 @@ const Navbar = () => {
                   onClick={() => handleTabClick("COVID-19 Testing")}
                   style={{
                     textDecoration: "none",
-                    color: selectedTab === "COVID-19 Testing" ? "#7FC602" : "#0d58a6",
+                    color:
+                      selectedTab === "COVID-19 Testing"
+                        ? "#7FC602"
+                        : "#0d58a6",
                   }}
                 >
                   <li>COVID-19 Testing</li>
                 </Link>
                 <Link
                   to="/diabetes-specialized-care-center"
-                  onClick={() => handleTabClick("Diabetes Specialized Care Center")}
+                  onClick={() =>
+                    handleTabClick("Diabetes Specialized Care Center")
+                  }
                   style={{
                     textDecoration: "none",
-                    color: selectedTab === "Diabetes Specialized Care Center" ? "#7FC602" : "#0d58a6",
+                    color:
+                      selectedTab === "Diabetes Specialized Care Center"
+                        ? "#7FC602"
+                        : "#0d58a6",
                   }}
                 >
                   <li>Diabetes Specialized Care Center</li>
@@ -102,7 +134,8 @@ const Navbar = () => {
                   onClick={() => handleTabClick("Med Pre-Pours")}
                   style={{
                     textDecoration: "none",
-                    color: selectedTab === "Med Pre-Pours" ? "#7FC602" : "#0d58a6",
+                    color:
+                      selectedTab === "Med Pre-Pours" ? "#7FC602" : "#0d58a6",
                   }}
                 >
                   <li>Med Pre-Pours</li>
@@ -112,7 +145,10 @@ const Navbar = () => {
                   onClick={() => handleTabClick("Durable Medical Equipment")}
                   style={{
                     textDecoration: "none",
-                    color: selectedTab === "Durable Medical Equipment" ? "#7FC602" : "#0d58a6",
+                    color:
+                      selectedTab === "Durable Medical Equipment"
+                        ? "#7FC602"
+                        : "#0d58a6",
                   }}
                 >
                   <li>Durable Medical Equipment</li>
@@ -122,7 +158,10 @@ const Navbar = () => {
                   onClick={() => handleTabClick("Erectile Dysfunction")}
                   style={{
                     textDecoration: "none",
-                    color: selectedTab === "Erectile Dysfunction" ? "#7FC602" : "#0d58a6",
+                    color:
+                      selectedTab === "Erectile Dysfunction"
+                        ? "#7FC602"
+                        : "#0d58a6",
                   }}
                 >
                   <li>Erectile Dysfunction</li>
@@ -132,7 +171,10 @@ const Navbar = () => {
                   onClick={() => handleTabClick("Health Screenings")}
                   style={{
                     textDecoration: "none",
-                    color: selectedTab === "Health Screenings" ? "#7FC602" : "#0d58a6",
+                    color:
+                      selectedTab === "Health Screenings"
+                        ? "#7FC602"
+                        : "#0d58a6",
                   }}
                 >
                   <li>Health Screenings</li>
@@ -142,7 +184,8 @@ const Navbar = () => {
                   onClick={() => handleTabClick("Immunizations")}
                   style={{
                     textDecoration: "none",
-                    color: selectedTab === "Immunizations" ? "#7FC602" : "#0d58a6",
+                    color:
+                      selectedTab === "Immunizations" ? "#7FC602" : "#0d58a6",
                   }}
                 >
                   <li>Immunizations</li>
@@ -152,7 +195,10 @@ const Navbar = () => {
                   onClick={() => handleTabClick("LEADER™ Products")}
                   style={{
                     textDecoration: "none",
-                    color: selectedTab === "LEADER™ Products" ? "#7FC602" : "#0d58a6",
+                    color:
+                      selectedTab === "LEADER™ Products"
+                        ? "#7FC602"
+                        : "#0d58a6",
                   }}
                 >
                   <li>LEADER™ Products</li>
@@ -162,7 +208,10 @@ const Navbar = () => {
                   onClick={() => handleTabClick("Medication Adherence")}
                   style={{
                     textDecoration: "none",
-                    color: selectedTab === "Medication Adherence" ? "#7FC602" : "#0d58a6",
+                    color:
+                      selectedTab === "Medication Adherence"
+                        ? "#7FC602"
+                        : "#0d58a6",
                   }}
                 >
                   <li>Medication Adherence</li>
@@ -172,27 +221,40 @@ const Navbar = () => {
                   onClick={() => handleTabClick("Medication Synchronization")}
                   style={{
                     textDecoration: "none",
-                    color: selectedTab === "Medication Synchronization" ? "#7FC602" : "#0d58a6",
+                    color:
+                      selectedTab === "Medication Synchronization"
+                        ? "#7FC602"
+                        : "#0d58a6",
                   }}
                 >
                   <li>Medication Synchronization</li>
                 </Link>
                 <Link
                   to="/medication-therapy-management"
-                  onClick={() => handleTabClick("Medication Therapy Management")}
+                  onClick={() =>
+                    handleTabClick("Medication Therapy Management")
+                  }
                   style={{
                     textDecoration: "none",
-                    color: selectedTab === "Medication Therapy Management" ? "#7FC602" : "#0d58a6",
+                    color:
+                      selectedTab === "Medication Therapy Management"
+                        ? "#7FC602"
+                        : "#0d58a6",
                   }}
                 >
                   <li>Medication Therapy Management</li>
                 </Link>
                 <Link
                   to="/nutrient-depletion-counseling"
-                  onClick={() => handleTabClick("Nutrient Depletion Counseling")}
+                  onClick={() =>
+                    handleTabClick("Nutrient Depletion Counseling")
+                  }
                   style={{
                     textDecoration: "none",
-                    color: selectedTab === "Nutrient Depletion Counseling" ? "#7FC602" : "#0d58a6",
+                    color:
+                      selectedTab === "Nutrient Depletion Counseling"
+                        ? "#7FC602"
+                        : "#0d58a6",
                   }}
                 >
                   <li>Nutrient Depletion Counseling</li>
@@ -202,7 +264,8 @@ const Navbar = () => {
                   onClick={() => handleTabClick("Home Delivery")}
                   style={{
                     textDecoration: "none",
-                    color: selectedTab === "Home Delivery" ? "#7FC602" : "#0d58a6",
+                    color:
+                      selectedTab === "Home Delivery" ? "#7FC602" : "#0d58a6",
                   }}
                 >
                   <li>Home Delivery</li>

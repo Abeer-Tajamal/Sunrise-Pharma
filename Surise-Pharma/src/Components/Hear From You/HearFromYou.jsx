@@ -24,7 +24,7 @@ const HearFromYou = () => {
               to="tel:475-209-9284"
               style={{ textDecoration: "none", color: "green" }}
             >
-              475-209-9284
+              <span className="underline-text">475-209-9284</span>
             </Link>
           </p>
           <p>Fax: 475-209-9286</p>

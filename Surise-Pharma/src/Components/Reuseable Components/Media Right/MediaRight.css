@@ -29,3 +29,7 @@
 .image-details__description {
   margin-bottom: 0;
 }
+
+.bullet-list {
+  list-style-type: disc;
+}

@@ -9,22 +9,20 @@ import Navbar from "../Reuseable Components/NavBar/NavBar";
 const InsurancePage = () => {
   DynamicPageTitle("Sunrise Pharmacy - Your Local Orange Pharmacy");
 
-  const insuranceDetails = {
-    image: "./Assets/Insurance/Insurance.jpg",
-    title: "Insurance",
-    description:
-      "We accept most major insurance plans. Our top insurance company partners include:",
-    arrayList: [
-      "Husky",
-      "Cigna",
-      "CVS Caremark",
-      "Medicaid",
-      "Aetna",
-      "AARP",
-      "Optum RX",
-      "Express Scripts",
-    ],
-  };
+  const image = "./Assets/Insurance/Insurance.jpg";
+  const title = "Insurance";
+  const description =
+    "We accept most major insurance plans. Our top insurance company partners include:";
+  const arrayList = [
+    "Husky",
+    "Cigna",
+    "CVS Caremark",
+    "Medicaid",
+    "Aetna",
+    "AARP",
+    "Optum RX",
+    "Express Scripts",
+  ];
 
   return (
     <>
@@ -32,7 +30,12 @@ const InsurancePage = () => {
       <Address />
       <Navbar />
       <div className="containerMedia">
-        <MediaRight {...insuranceDetails} />
+        <MediaRight
+          image={image}
+          title={title}
+          description={description}
+          array={arrayList}
+        />
       </div>
       <Footer />
     </>

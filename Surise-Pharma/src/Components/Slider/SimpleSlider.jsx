@@ -31,7 +31,7 @@ const MyCarousel = () => {
     },
     {
       backgroundImage: 'url("./Assets/Home Page/Durable Medical Equipment.jpeg")',
-      link: "/durable-medical-equipments",
+      link: "/durable-medical-equipment",
       title: 'Durable Medical Equipment',
       description: 'Available for purchase and rental'
     },
@@ -43,14 +43,14 @@ const MyCarousel = () => {
     },
     {
       backgroundImage: 'url("./Assets/Home Page/Health Screening.jpeg")',
-      link: "/health-screening",
-      title: 'Health Screening',
+      link: "/health-screenings",
+      title: 'Health Screenings',
       description: 'Pharmacist performing health screening on patient'
     },
     {
       backgroundImage: 'url("./Assets/Home Page/Immunization.jpeg")',
-      link: "/immunization",
-      title: 'Immunization',
+      link: "/immunizations",
+      title: 'Immunizations',
       description: 'We offer a variety of vaccines to keep you healthy'
     },
     {
@@ -79,13 +79,13 @@ const MyCarousel = () => {
     },
     {
       backgroundImage: 'url("./Assets/Home Page/Nutrition Depletion Counseling.jpg")',
-      link: "/nutrition-depletion-counseling",
+      link: "/nutrient-depletion-counseling",
       title: 'Nutrition Depletion Counseling',
       description: 'Our staff is trained in identifying drug-induced nutrient depletion and providing medication counseling to help'
     },
     {
       backgroundImage: 'url("./Assets/Home Page/Pet Care.jpeg")',
-      link: "/pet-care",
+      link: "/",
       title: 'Pet Care',
       description: 'Prescriptions and medications specifically for your furry friend'
     },

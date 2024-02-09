@@ -3,10 +3,8 @@ import "./MediaLeft.css";
 const MediaLeft = ({ imgSrc, content, title }) => {
   return (
     <div className="outer-container">
-      <div className="media-left">
-        <div className="left-image-div">
-          <img src={imgSrc} alt="Additional Services" className="inner-Image" />
-        </div>
+      <div className="left-image-div">
+        <img src={imgSrc} alt="Additional Services" className="inner-Image" />
       </div>
       <div className="media-bottom">
         <h2>{title}</h2>

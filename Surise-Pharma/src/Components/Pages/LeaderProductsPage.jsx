@@ -9,11 +9,9 @@ import Navbar from "../Reuseable Components/NavBar/NavBar";
 const LeaderProductsPage = () => {
     DynamicPageTitle("LEADER™ Products - Sunrise Pharmacy - Your Local Orange Pharmacy");
 
-    const deliveryDetails = {
-        image: "./Assets/Services/Leader Producrs/Leader Products.png",
-        description:
-            "We offer LEADER™ high-quality products which contain the same active ingredients as national brands, at a lower cost."
-    };
+    const image = "./Assets/Services/Leader Producrs/Leader Products.png";
+    const description = "We offer LEADER™ high-quality products which contain the same active ingredients as national brands, at a lower cost.";
+    const arrayList = [];
 
     return (
         <>
@@ -21,9 +19,7 @@ const LeaderProductsPage = () => {
             <Address />
             <Navbar />
             <PageHeader heading="LEADER™ Products"/>
-            <div className="containerMedia">
-                <MediaRight {...deliveryDetails} />
-            </div>
+            <MediaRight array={arrayList} image={image} description={description} />
             <Footer />
         </>
     );

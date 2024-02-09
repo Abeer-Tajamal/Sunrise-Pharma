@@ -9,15 +9,11 @@ import Navbar from "../Reuseable Components/NavBar/NavBar";
 const HomeDeliveryPage = () => {
     DynamicPageTitle("Home Delivery - Sunrise Pharmacy - Your Local Orange Pharmacy");
 
-    const deliveryDetails = {
-        image: "./Assets/Services/Home Delivery.png",
-        description:
-            "Don't have time to make it to the pharmacy? No problem. We offer free delivery to the nearby Orange area for your convenience.",
-        description2:
-            "We can also deliver any OTC items you request along with your prescription.",
-        description3:
-            "Contact us for details or to schedule your next delivery."
-    };
+    const image = "./Assets/Services/Home Delivery.png";
+    const description = "Don't have time to make it to the pharmacy? No problem. We offer free delivery to the nearby Orange area for your convenience.";
+    const description2 = "We can also deliver any OTC items you request along with your prescription.";
+    const description3 = "Contact us for details or to schedule your next delivery.";
+    const arrayList = [];
 
     return (
         <>
@@ -25,9 +21,7 @@ const HomeDeliveryPage = () => {
             <Address />
             <Navbar />
             <PageHeader heading="Home Delivery"/>
-            <div className="containerMedia">
-                <MediaRight {...deliveryDetails} />
-            </div>
+            <MediaRight array={arrayList} image={image} description={description} description2={description2} description3={description3} />
             <Footer />
         </>
     );

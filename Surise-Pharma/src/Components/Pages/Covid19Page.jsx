@@ -9,25 +9,19 @@ import Navbar from "../Reuseable Components/NavBar/NavBar";
 const Covid19Page = () => {
     DynamicPageTitle("COVID-19 Testing - Sunrise Pharmacy - Your Local Orange Pharmacy");
 
-    const deliveryDetails = {
-        image: "./Assets/Home Page/Covid-19 Testing.jpg",
-        description:
-            "Do you have symptoms of COVID-19 but no time to go to the doctor? We offer rapid COVID-19 tests.",
-        description2:
-            "Whenever you feel like you COVID-19, we can be your one-stop shop. Our highly qualified pharmacists can evaluate you, perform the COVID-19 test and make sure you get the right medications.",
-        description3:
-            "Speak to one of our staff members for more information on our COVID-19 testing."
-    };
-
+    const image = "./Assets/Home Page/Covid-19 Testing.jpg";
+    const description = "Do you have symptoms of COVID-19 but no time to go to the doctor? We offer rapid COVID-19 tests.";
+    const description2 = "Whenever you feel like you COVID-19, we can be your one-stop shop. Our highly qualified pharmacists can evaluate you, perform the COVID-19 test and make sure you get the right medications.";
+    const description3 = "Speak to one of our staff members for more information on our COVID-19 testing.";
+    const arrayList = [];
+    
     return (
         <>
             <Home />
             <Address />
             <Navbar />
-            <PageHeader heading="COVID-19 Testing"/>
-            <div className="containerMedia">
-                <MediaRight {...deliveryDetails} />
-            </div>
+            <PageHeader heading="COVID-19 Testing" />
+            <MediaRight array={arrayList} image={image} description={description} description2={description2} description3={description3} />
             <Footer />
         </>
     );

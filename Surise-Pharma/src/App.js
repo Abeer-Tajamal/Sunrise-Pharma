@@ -16,6 +16,12 @@ import DiabetesSpecializedCareCenterPage from './Components/Pages/DiabetesSpecia
 import Covid19Page from './Components/Pages/Covid19Page';
 import TemsConditionPage from './Components/Pages/TermsConditionsPage';
 import PrivacyPolicyPage from './Components/Pages/PrivacyPolicyPage';
+import MedPrePoursPage from './Components/Pages/MedPre-PoursPage';
+import DurableMedicalEquipmentPage from './Components/Pages/DurableMedicalEquipmentPage';
+import HealthScreeningsPage from './Components/Pages/HealthScreeningsPage';
+import ImmunizationsPage from './Components/Pages/ImmunizationsPage';
+import MedicationTherapyManagementPage from './Components/Pages/MedicationTherapyManagementPage';
+import NutrientDepletionCounselingPage from './Components/Pages/NutrientDepletionCounselingPage';
 
 const routesConfig = [
   { path: '/', element: <HomePage /> },
@@ -33,6 +39,12 @@ const routesConfig = [
   { path: '/covid-19-testing', element: <Covid19Page /> },
   { path: '/terms-conditions', element: <TemsConditionPage /> },
   { path: '/privacy-policy', element: <PrivacyPolicyPage /> },
+  { path: '/med-pre-pours', element: <MedPrePoursPage /> },
+  { path: '/durable-medical-equipment', element: <DurableMedicalEquipmentPage /> },
+  { path: '/health-screenings', element: <HealthScreeningsPage/> },
+  { path: '/immunizations', element: <ImmunizationsPage /> },
+  { path: '/medication-therapy-management', element: <MedicationTherapyManagementPage /> },
+  { path: '/nutrient-depletion-counseling', element: <NutrientDepletionCounselingPage /> },
 ];
 
 function App() {

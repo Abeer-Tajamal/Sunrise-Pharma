@@ -5,28 +5,28 @@
   padding: 0 50px 20px 50px;
 }
 
-.image-details__image-container {
+.image-details-image-container {
   flex: 1;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
-.image-details__image {
+.image-details-image {
   width: 100%;
   height: auto;
 }
 
-.image-details__details {
+.image-details-details {
   flex: 2;
   margin-right: 30px;
 }
 
-.image-details__title {
+.image-details-title {
   margin-top: 0;
   color: #0b59a6;
   margin-bottom: 10px;
 }
 
-.image-details__description {
+.image-details-description {
   margin-bottom: 0;
 }
 

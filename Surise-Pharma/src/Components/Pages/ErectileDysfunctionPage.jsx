@@ -9,11 +9,9 @@ import Navbar from "../Reuseable Components/NavBar/NavBar";
 const ErectileDysfunctionPage = () => {
     DynamicPageTitle("Erectile Dysfunction - Sunrise Pharmacy - Your Local Orange Pharmacy");
 
-    const deliveryDetails = {
-        image: "./Assets/Services/Erectile Dysfunction/Erectile Dysfunction.jpg",
-        description:
-            "You can feel comfortable discussing your ED questions and concerns with our pharmacist because we are committed to respecting your privacy with private consultations and secure online refills. Contact us for details or transfer your prescription today."
-    };
+    const image = "./Assets/Services/Erectile Dysfunction/Erectile Dysfunction.jpg";
+    const description = "You can feel comfortable discussing your ED questions and concerns with our pharmacist because we are committed to respecting your privacy with private consultations and secure online refills. Contact us for details or transfer your prescription today.";
+    const arrayList = [];
 
     return (
         <>
@@ -21,9 +19,7 @@ const ErectileDysfunctionPage = () => {
             <Address />
             <Navbar />
             <PageHeader heading="Erectile Dysfunction"/>
-            <div className="containerMedia">
-                <MediaRight {...deliveryDetails} />
-            </div>
+            <MediaRight array={arrayList} image={image} description={description} />
             <Footer />
         </>
     );

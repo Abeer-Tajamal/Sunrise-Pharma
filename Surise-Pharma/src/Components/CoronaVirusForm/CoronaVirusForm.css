@@ -18,4 +18,9 @@
 
 .link-color {
   color: #1a84ff;
+  text-decoration: none;
+}
+
+.link-color:hover {
+  text-decoration: underline;
 }

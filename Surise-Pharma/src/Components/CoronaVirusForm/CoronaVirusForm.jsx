@@ -16,6 +16,25 @@ import { useState } from "react";
 
 const Coronavirus = () => {
   const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+
+  const formatMobileNumber = (input) => {
+    // Remove any non-numeric characters
+    const formattedNumber = input.replace(/\D/g, "");
+
+    // Add hyphens at appropriate positions
+    if (formattedNumber.length > 7) {
+      return `(${formattedNumber.slice(0, 3)}) ${formattedNumber.slice(
+        3,
+        6
+      )} - ${formattedNumber.slice(6, 10)}`;
+    }
+
+    return formattedNumber;
+  };
+
   const handleClick = () => {};
 
   return (
@@ -33,16 +52,44 @@ const Coronavirus = () => {
         <Typography>Please tell us about yourself</Typography>
       </div>
       <div className="form-div">
-        <TextField variant="outlined" label="First Name" fullWidth />
+        <TextField
+          variant="outlined"
+          label="First Name"
+          fullWidth
+          onChange={(e) => {
+            setFirstName(e.target.value);
+          }}
+        />
       </div>
       <div className="form-div">
-        <TextField variant="outlined" label="Last Name" fullWidth />
+        <TextField
+          variant="outlined"
+          label="Last Name"
+          fullWidth
+          onChange={(e) => {
+            setLastName(e.target.value);
+          }}
+        />
       </div>
       <div className="form-div">
-        <TextField variant="outlined" label="Email" type="email" fullWidth />
+        <TextField
+          variant="outlined"
+          label="Email"
+          type="email"
+          fullWidth
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+        />
       </div>
       <div className="form-div">
-        <TextField variant="outlined" label="Phone" size="Normal" fullWidth />
+        <TextField
+          variant="outlined"
+          label="Phone"
+          fullWidth
+          value={phone}
+          onChange={(e) => setPhone(formatMobileNumber(e.target.value))}
+        />
         <Typography variant="subtitle1" color="lightgray">
           Cell phone number preferred so we may text you reminders &
           notifications.
@@ -98,13 +145,14 @@ const Coronavirus = () => {
           <Link className="link-color" to="/terms-conditions">
             Terms and Conditions
           </Link>
-          ,
+          ,&nbsp;
           <Link className="link-color" to="/privacy-policy">
-            Privacy Policy
+            Privacy Policy&nbsp;
           </Link>
           and <Link className="link-color">Messaging Consent</Link>
         </Typography>
       </div>
+      <br />
       <Button variant="contained" onClick={handleClick}>
         Join WaitList
       </Button>

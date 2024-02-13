@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import "./Form.css";
+import InputIcon from "@mui/icons-material/Input";
 
 function Step1({ onNext }) {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [dateofbirth, setDateOfBirth] = useState(new Date());
+  const [dateofbirth, setDateOfBirth] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,55 +15,81 @@ function Step1({ onNext }) {
     onNext({ firstName, lastName, email, phone, dateofbirth });
   };
 
+  const formatMobileNumber = (input) => {
+    // Remove any non-numeric characters
+    const formattedNumber = input.replace(/\D/g, "");
+
+    // Add hyphens at appropriate positions
+    if (formattedNumber.length > 7) {
+      return `(${formattedNumber.slice(0, 3)}) ${formattedNumber.slice(
+        3,
+        6
+      )} - ${formattedNumber.slice(6, 10)}`;
+    }
+
+    return formattedNumber;
+  };
+
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Step 1: Personal Information</h2>
-      <label>
-        First Name:
-        <input
-          type="text"
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Last Name:
-        <input
-          type="text"
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Phone:
-        <input
-          type="tel"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Date of Birth:
-        <input
-          type="date"
-          value={dateofbirth}
-          onChange={(e) => setDateOfBirth(e.target.value)}
-          required
-        />
-      </label>
-      <label>
-        Email:
+    <form onSubmit={handleSubmit} className="form-outer-div">
+      <div className="title-div">
+        <InputIcon className="title-icon" />
+        <h2>Enter Profile Info</h2>
+      </div>
+      <div className="two-inputs">
+        <div className="label-input">
+          <label>First Name</label>
+          <input
+            type="text"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            required
+          />
+        </div>
+        <div className="label-input">
+          <label>Last Name</label>
+          <input
+            type="text"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            required
+          />
+        </div>
+      </div>
+      <div className="two-inputs">
+        <div className="label-input">
+          <label>Cell Phone</label>
+          <input
+            type="tel"
+            value={phone}
+            onChange={(e) => setPhone(formatMobileNumber(e.target.value))}
+            required
+          />
+        </div>
+        <div className="label-input">
+          <label>Date of Birth</label>
+          <input
+            type="date"
+            value={dateofbirth}
+            onChange={(e) => setDateOfBirth(e.target.value)}
+            required
+          />
+        </div>
+      </div>
+      <div className="last-input">
+        <label>Email Address</label>
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-      </label>
-      <button type="submit">Next</button>
+      </div>
+      <div className="btn-div">
+        <button type="submit" className="next-btn">
+          NEXT
+        </button>
+      </div>
     </form>
   );
 }
@@ -75,18 +103,25 @@ function Step2({ onNext }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Step 2: Delivery Type</h2>
-      <label>
-        Delivery Type:
+    <form onSubmit={handleSubmit} className="form-outer-div">
+      <div className="title-div">
+        <InputIcon className="title-icon" />
+        <h2>Select Your Pharmacy</h2>
+      </div>
+      <div className="label-input">
+        <label>Delivery Type:</label>
         <input
           type="text"
           value={deliverType}
           onChange={(e) => setDeliverType(e.target.value)}
           required
         />
-      </label>
-      <button type="submit">Next</button>
+      </div>
+      <div>
+        <button type="submit" className="next-btn">
+          Next
+        </button>
+      </div>
     </form>
   );
 }
@@ -149,8 +184,8 @@ function Stepper() {
         />
       )}
       {step < 3 && (
-        <button onClick={handleReset} style={{ marginTop: "1rem" }}>
-          Back
+        <button onClick={handleReset} className="back-btn">
+          back
         </button>
       )}
     </div>

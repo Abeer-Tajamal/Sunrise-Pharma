@@ -1,5 +1,5 @@
 import "./MediaCard.css";
-import MediaCards from "../../Reuseable Components/Cards/MediaCards";
+import MediaCards from "../../Reuseable Components/Cards/Media Cards/MediaCards";
 
 const MediaCard = () => {
   const cardContent1 = {

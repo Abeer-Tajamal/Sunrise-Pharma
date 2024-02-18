@@ -41,11 +41,13 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img
-          className="logo-image"
-          src="./Assets/Home Page/Sunrise Pharmacy Logo.png"
-          alt="Sunrise Pharmacy"
-        />
+        <Link to="/">
+          <img
+            className="logo-image"
+            src="./Assets/Home Page/Sunrise Pharmacy Logo.png"
+            alt="Sunrise Pharmacy"
+          />
+        </Link>
       </div>
       <div className="left-container">
         <div className="topLeft-container">

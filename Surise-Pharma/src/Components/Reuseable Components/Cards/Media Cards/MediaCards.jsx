@@ -3,16 +3,14 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
+import "./MediaCards.css";
 
 const MediaCard = ({ image, title, description }) => {
   return (
-    <Card
-      sx={{ maxWidth: 345 }}
-      style={{ backgroundColor: "#f5f5f5", border: "none !important" }}
-    >
+    <Card sx={{ maxWidth: 345 }} style={{ backgroundColor: "white" }}>
       <div>
         <CardMedia
-          style={{ backgroundColor: "#7FC602", objectFit: "fill" }}
+          className="card-img"
           component="img"
           sx={{ height: 140 }}
           image={image}
@@ -24,7 +22,7 @@ const MediaCard = ({ image, title, description }) => {
           gutterBottom
           variant="h5"
           component="div"
-          style={{ color: "#558103", justifyContent: "center" }}
+          className="card-title"
         >
           {title}
         </Typography>

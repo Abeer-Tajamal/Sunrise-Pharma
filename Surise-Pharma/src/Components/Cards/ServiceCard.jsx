@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceCard from "../Reuseable Components/Cards/MediaCards";
+import ServiceCard from "../Reuseable Components/Cards/Media Cards/MediaCards";
 
 const Services = () => {
   const ServiceCard1 = {

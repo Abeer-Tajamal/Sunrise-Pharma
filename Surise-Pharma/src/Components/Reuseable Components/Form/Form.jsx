@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Form.css";
 import InputIcon from "@mui/icons-material/Input";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Step1({ onNext }) {
   const [firstName, setFirstName] = useState("");
@@ -70,6 +72,7 @@ function Step1({ onNext }) {
           <label>Date of Birth</label>
           <input
             type="date"
+            name={dateofbirth}
             value={dateofbirth}
             onChange={(e) => setDateOfBirth(e.target.value)}
             required
@@ -109,8 +112,15 @@ function Step2({ onNext }) {
         <h2>Select Your Pharmacy</h2>
       </div>
       <div className="label-input">
-        <label>Delivery Type:</label>
+        <label className="form-label">Pharmacy Location</label>
+        <select className="menu-option">
+          <option>Sunrise Pharmacy</option>
+        </select>
+      </div>
+      <div className="label-input">
+        <label className="form-label">Pickup Method</label>
         <input
+          className="menu-option"
           type="text"
           value={deliverType}
           onChange={(e) => setDeliverType(e.target.value)}
@@ -127,36 +137,41 @@ function Step2({ onNext }) {
 }
 
 function Step3({ onNext }) {
-  const [medicineNumber, setMedicineNumber] = useState("");
-  const [medicineName, setMedicineName] = useState("");
+  const [RxNumber, setRxNumber] = useState("");
+  const [RxName, setRxName] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onNext({ medicineNumber, medicineName });
+    onNext({ RxNumber, RxName });
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Step 3: Medicine Information</h2>
-      <label>
-        Medicine Number:
+    <form className="form-outer-div" onSubmit={handleSubmit}>
+      <div className="title-div">
+        <InputIcon className="title-icon" />
+        <h2>Medications List</h2>
+      </div>
+      <div className="last-input">
+        <label>Rx Number:</label>
         <input
           type="text"
-          value={medicineNumber}
-          onChange={(e) => setMedicineNumber(e.target.value)}
+          value={RxNumber}
+          onChange={(e) => setRxNumber(e.target.value)}
           required
         />
-      </label>
-      <label>
-        Medicine Name:
+      </div>
+      <div className="last-input">
+        <label>Rx Name:</label>
         <input
           type="text"
-          value={medicineName}
-          onChange={(e) => setMedicineName(e.target.value)}
+          value={RxName}
+          onChange={(e) => setRxName(e.target.value)}
           required
         />
-      </label>
-      <button type="submit">Submit</button>
+      </div>
+      <button className="next-btn" type="submit">
+        Submit
+      </button>
     </form>
   );
 }
@@ -164,6 +179,7 @@ function Step3({ onNext }) {
 function Stepper() {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({});
+  const history = useNavigate();
 
   const handleNext = (data) => {
     setFormData((prevData) => ({ ...prevData, ...data }));
@@ -174,15 +190,25 @@ function Stepper() {
     setStep((prevStep) => prevStep - 1);
   };
 
+  const sendMail = (data) => {
+    axios
+      .post("http://localhost:5000/send-data", { ...formData, ...data })
+      .then((res) => {
+        if (res.data.success) {
+          history("/");
+        } else alert("Error occured");
+      })
+      .catch((error) => {
+        console.error("Error sending mail:", error);
+        alert("Error occurred");
+      });
+  };
+
   return (
     <div>
       {step === 1 && <Step1 onNext={handleNext} />}
       {step === 2 && <Step2 onNext={handleNext} />}
-      {step === 3 && (
-        <Step3
-          onNext={(data) => console.log("Submitted:", { ...formData, ...data })}
-        />
-      )}
+      {step === 3 && <Step3 onNext={(data) => sendMail(data)} />}
       {step < 3 && (
         <button onClick={handleReset} className="back-btn">
           back

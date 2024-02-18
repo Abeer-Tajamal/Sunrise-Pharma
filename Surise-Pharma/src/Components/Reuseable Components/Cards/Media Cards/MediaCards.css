@@ -1,0 +1,13 @@
+.css-1ri6ub7-MuiPaper-root-MuiCard-root {
+  box-shadow: none !important;
+}
+
+.card-img {
+  background-color: #7fc602;
+  object-fit: inherit !important;
+  cursor: pointer;
+}
+
+.card-title {
+  color: #558103;
+}

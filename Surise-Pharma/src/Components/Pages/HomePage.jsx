@@ -11,6 +11,7 @@ import Services from "../Cards/ServiceCard";
 import TestimonialHeader from "../Reuseable Components/PageHeader/PageHeader";
 import HearFromYou from "../Hear From You/HearFromYou";
 import PharmacyInsider from "../Pharmacy Insider/PharmacyInsider";
+import TitleText from "../TitleText/TitleText";
 
 const HomePage = () => {
   return (
@@ -21,12 +22,18 @@ const HomePage = () => {
       <br />
       <SimpleSlider />
       <OutlinedCard />
+      <br />
+      <TitleText />
+      <br />
       <MediaCard />
+      <br />
       <PharmacyInsider />
       <CareBeyondDrugs />
       <TestimonialHeader heading="Read Our Patient Reviews" />
       <Testimonals />
+      <br />
       <Services />
+      <br />
       <HearFromYou />
       <Footer />
     </>

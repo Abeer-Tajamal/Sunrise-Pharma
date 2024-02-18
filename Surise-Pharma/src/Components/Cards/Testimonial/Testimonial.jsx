@@ -1,5 +1,5 @@
 import "./Testimonial.css";
-import TestimonialCard from "../../Reuseable Components/Cards/MediaCards";
+import TestimonialCard from "../../Reuseable Components/Cards/Media Cards/MediaCards";
 
 const Testimonials = () => {
   const TestimonialCard1 = {

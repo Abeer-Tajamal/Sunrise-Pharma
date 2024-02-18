@@ -92,3 +92,16 @@ input {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.form-label {
+  font-weight: bold;
+  font-size: 15px;
+  margin: 5px 30px;
+}
+
+.menu-option {
+  height: 40px;
+  margin: 10px 30px;
+  border-radius: 4px;
+  border: 2px solid lightgray;
+}

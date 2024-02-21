@@ -3,8 +3,15 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import ColorButtons from "../Button/button";
+import { Link } from "react-router-dom";
 
-const CustomCard = ({ title, description, buttonText, buttonLink, buttonTarget }) => {
+const CustomCard = ({
+  title,
+  description,
+  buttonText,
+  buttonLink,
+  buttonTarget,
+}) => {
   return (
     <>
       <CardContent
@@ -12,14 +19,17 @@ const CustomCard = ({ title, description, buttonText, buttonLink, buttonTarget }
           justifyContent: "center",
         }}
       >
-        <Typography variant="h5" component="div">
+        <Typography variant="h5" component="div" sx={{ textAlign: "center" }}>
           <h3>
-            <a
-              href={buttonLink}
-              style={{ textDecoration: "none", color: "#0d58a6" }}
+            <Link
+              to={buttonLink}
+              style={{
+                textDecoration: "none",
+                color: "#0d58a6",
+              }}
             >
               {title}
-            </a>
+            </Link>
           </h3>
         </Typography>
         <Typography variant="body2">{description}</Typography>
@@ -29,7 +39,11 @@ const CustomCard = ({ title, description, buttonText, buttonLink, buttonTarget }
           justifyContent: "center",
         }}
       >
-        <ColorButtons buttonTarget={buttonTarget} buttonLink={buttonLink} label={buttonText} />
+        <ColorButtons
+          buttonTarget={buttonTarget}
+          buttonLink={buttonLink}
+          label={buttonText}
+        />
       </CardActions>
     </>
   );

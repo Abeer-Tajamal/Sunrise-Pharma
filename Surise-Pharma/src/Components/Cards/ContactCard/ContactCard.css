@@ -1,0 +1,11 @@
+.outer-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.inner-container {
+  border: 1px solid lightblue;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+}

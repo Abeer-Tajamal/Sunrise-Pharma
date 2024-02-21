@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import "./Footer.css";
-import ColorButtons from "../Button/button"
+import ColorButtons from "../Button/button";
 
 const Footer = () => {
   return (
@@ -42,12 +42,18 @@ const Footer = () => {
               </Link>
             </li>
             <li className="underlineText">
-              <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+              <Link
+                to="/refill"
+                style={{ textDecoration: "none", color: "white" }}
+              >
                 Refill
               </Link>
             </li>
             <li className="underlineText">
-              <Link to="/" style={{ textDecoration: "none", color: "white" }}>
+              <Link
+                to="/pharmacy-near-me-orange-ct"
+                style={{ textDecoration: "none", color: "white" }}
+              >
                 Transfer
               </Link>
             </li>
@@ -103,7 +109,11 @@ const Footer = () => {
             </li>
             <br />
             <li>
-              <ColorButtons buttonTarget="_blank" buttonLink="http://search.google.com/local/writereview?placeid=ChIJdenmwm116IkRQ_JDQmbs_4U" label="Submit a Review" />
+              <ColorButtons
+                buttonTarget="_blank"
+                buttonLink="http://search.google.com/local/writereview?placeid=ChIJdenmwm116IkRQ_JDQmbs_4U"
+                label="Submit a Review"
+              />
             </li>
           </ul>
         </div>

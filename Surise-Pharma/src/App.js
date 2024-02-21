@@ -18,6 +18,7 @@ import TemsConditionPage from "./Components/Pages/TermsConditionsPage";
 import PrivacyPolicyPage from "./Components/Pages/PrivacyPolicyPage";
 import MyForm from "./Components/Reuseable Components/Form/Form";
 import CoronaVirusPage from "./Components/Pages/CoronaVirusPage";
+import TransferAPrescription from "./Components/Pages/TransferAPrescription";
 
 const routesConfig = [
   { path: "/", element: <HomePage /> },
@@ -43,6 +44,7 @@ const routesConfig = [
   { path: "/privacy-policy", element: <PrivacyPolicyPage /> },
   { path: "/refill", element: <MyForm /> },
   { path: "/coronavirus", element: <CoronaVirusPage /> },
+  { path: "/pharmacy-near-me-orange-ct", element: <TransferAPrescription /> },
 ];
 
 function App() {

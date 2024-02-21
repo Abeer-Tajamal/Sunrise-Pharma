@@ -1,4 +1,4 @@
-import OutlinedCard from "../Cards/OutlinedCard/OutlinedCard";
+import ContactCard from "../Cards/ContactCard/ContactCard";
 import GoogleMap from "../Google Map/GoogleMap";
 import Address from "../Reuseable Components/Address/Address";
 import useDynamicPageTitle from "../Reuseable Components/DynamicPageTitle/DynamicPageTitle";
@@ -14,7 +14,8 @@ const ContactUsPage = () => {
       <Home />
       <Address />
       <Navbar />
-      <OutlinedCard />
+      <br />
+      <ContactCard />
       <GoogleMap />
       <Footer />
     </>

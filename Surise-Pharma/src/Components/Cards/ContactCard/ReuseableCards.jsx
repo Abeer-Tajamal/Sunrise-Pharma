@@ -4,7 +4,7 @@ import "./ReuseableCards.css";
 const ReuseableCards = ({ title, p1, p2, p3, LinkText, LinkText2 }) => {
   return (
     <div className="container-content">
-      <h2>{title}</h2>
+      <h2 className="title-card">{title}</h2>
       <p>
         {p1}
         <Link to="tel:475-209-9284" className="link-text">

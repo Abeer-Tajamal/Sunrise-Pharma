@@ -4,7 +4,7 @@ import "./Services.css";
 const Services = () => {
   return (
     <div className="main-container">
-      <div className="inner-container">
+      <div className="inner-container-services">
         <MediaTop
           imgSrc="../Assets/Services/Diabetes Care.jpg"
           imgLink="/diabetes-specialized-care-center"
@@ -30,7 +30,7 @@ const Services = () => {
           content="We provide on-site health screenings, giving you the opportunity to gather health information without the need for a visit to the doctor."
         />
       </div>
-      <div className="inner-container">
+      <div className="inner-container-services">
         <MediaTop
           imgSrc="../Assets/Services/Immunixations.jpg"
           imgLink="/immunizations"
@@ -56,7 +56,7 @@ const Services = () => {
           content="Synchronize your prescriptions with our pharmacy and collect all your medications on a consistent day each month."
         />
       </div>
-      <div className="inner-container">
+      <div className="inner-container-services">
         <MediaTop
           imgSrc="../Assets/Services/Medication Management.jpg"
           imgLink="/medication-therapy-management"

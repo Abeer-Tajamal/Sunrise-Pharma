@@ -3,8 +3,15 @@
   flex-direction: column;
 }
 
-.inner-container {
+.inner-container-services {
   display: flex;
   justify-content: space-around;
-  padding: 0px 80px;
+  padding: 0px 20px;
+}
+
+@media only screen and (max-width: 980px) {
+  .inner-container-services {
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+  }
 }

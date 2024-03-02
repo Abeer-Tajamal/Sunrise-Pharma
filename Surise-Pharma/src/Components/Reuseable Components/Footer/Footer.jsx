@@ -57,11 +57,6 @@ const Footer = () => {
                 Transfer
               </Link>
             </li>
-            <li className="underlineText">
-              <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-                Account
-              </Link>
-            </li>
           </ul>
         </div>
         <div>
@@ -103,10 +98,46 @@ const Footer = () => {
             <li>
               <strong>Services</strong>
             </li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li className="underlineText">
+              <Link
+                to="/med-pre-pours"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Med Pre-Pours
+              </Link>
+            </li>
+            <li className="underlineText">
+              <Link
+                to="/immunizations"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Immunization
+              </Link>
+            </li>
+            <li className="underlineText">
+              <Link
+                to="/medication-adherence"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Medication Adherence
+              </Link>
+            </li>
+            <li className="underlineText">
+              <Link
+                to="/medication-synchronization"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Medication Synchronization
+              </Link>
+            </li>
+            <li className="underlineText">
+              <Link
+                to="/medication-therapy-management"
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Medication Management
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
@@ -128,6 +159,16 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+      </div>
+      <div
+        style={{
+          backgroundColor: "#0d58a6",
+          color: "white",
+          textAlign: "center",
+          paddingBottom: "20px",
+        }}
+      >
+        Copyrights 2024. All rights are reserved by Sunrise Pharmacy.
       </div>
     </>
   );

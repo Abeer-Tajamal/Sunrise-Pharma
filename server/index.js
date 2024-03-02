@@ -1,8 +1,8 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
-const twilio = require("twilio");
 const cors = require("cors");
 const emailTemplate = require("./emailTemplate.js");
+const pdf = require("html-pdf");
 require("dotenv").config();
 
 const app = express();
@@ -17,12 +17,6 @@ const transporter = nodemailer.createTransport({
     pass: process.env.APP_PASSWORD,
   },
 });
-
-// Configure Twilio client with your Account SID and Auth Token
-// const twilioClient = twilio(
-//   "<your-twilio-account-sid>",
-//   "<your-twilio-auth-token>"
-// );
 
 // Endpoint to handle form data and send email
 app.post("/send-data", (req, res) => {
@@ -66,20 +60,62 @@ app.post("/send-data", (req, res) => {
         .json({ success: true, message: "Email sent successfully" });
     }
   });
+});
 
-  // Send fax using Twilio
-  // twilioClient.fax.faxes
-  //   .create({
-  //     from: "<your-twilio-phone-number>",
-  //     to: "<recipient-fax-number>",
-  //     mediaUrl: "https://example.com/fax-document.pdf", // Replace with the URL of your fax document
-  //   })
-  //   .then((fax) => {
-  //     console.log("Fax sent:", fax.sid);
-  //   })
-  //   .catch((error) => {
-  //     console.error("Error sending fax:", error);
-  //   });
+app.post("/send-data", (req, res) => {
+  const {
+    firstName,
+    lastName,
+    email,
+    phone,
+    dateofbirth,
+    deliverType,
+    address,
+    medicines,
+  } = req.body;
+
+  const outputPath = "Medicine.pdf";
+  const htmlContent = emailTemplate(
+    firstName,
+    lastName,
+    email,
+    phone,
+    dateofbirth,
+    deliverType,
+    address,
+    medicines
+  );
+
+  const convertHtmlToPdf = pdf
+    .create(htmlContent)
+    .toFile(outputPath, (err, res) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      console.log("PDF created successfully:", res.filename);
+      return res.filename;
+    });
+
+  // Construct email message with the received data
+  const mailOptions = {
+    from: process.env.SENDER_EMAIL,
+    // to: "00842443838@print.brother.com",
+    to: process.env.SENDER_EMAIL,
+    attachments: [{ path: convertHtmlToPdf }],
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error("Error sending email:", error);
+      res.status(500).json({ success: false, message: "Failed to send email" });
+    } else {
+      console.log("Email sent:", info.response);
+      res
+        .status(200)
+        .json({ success: true, message: "Email sent successfully" });
+    }
+  });
 });
 
 const PORT = process.env.PORT || 5000;

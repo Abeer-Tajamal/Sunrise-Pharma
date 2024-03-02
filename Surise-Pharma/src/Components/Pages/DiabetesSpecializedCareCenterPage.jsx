@@ -11,12 +11,9 @@ const DiabetesSpecializedCareCenterPage = () => {
   );
 
   const image = "./Assets/Services/Diabetes Care/Diabetes Care.jpg";
-  const description =
-    "We understand that managing diabetes can be a challenging task. Our pharmacy team has received extensive training and are specialized in supporting patients with Type 1, Type 2 and Gestational diabetes.";
-  const description2 =
-    "We can help you understand and manage your diabetes with specialized monitoring, medications, and recommendations that can help you independently maintain a healthy lifestyle with diabetes.";
-  const description3 =
-    "Talk to a member of our pharmacy staff today for more information on living well with diabetes.";
+  const description = "We acknowledge the challenges of managing diabetes. Our pharmacy team, extensively trained, specializes in providing support for patients dealing with Type 1, Type 2, and Gestational diabetes.";
+  const description2 = "We are here to assist you in comprehending and handling your diabetes through specialized monitoring, medications, and recommendations. Our support enables you to independently maintain a healthy lifestyle with diabetes.";
+  const description3 = "Engage with a member of our pharmacy team today to learn more about leading a healthy life with diabetes.";
   const arrayList = [];
 
   return (

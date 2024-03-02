@@ -9,25 +9,25 @@ const Services = () => {
           imgSrc="../Assets/Services/Diabetes Care.jpg"
           imgLink="/diabetes-specialized-care-center"
           btnName="Diabetes Specialized Care"
-          content="We can help you understand and manage your diabetes with specialized monitoring, medications, and recommendations."
+          content="We can assist you in comprehending and handling your diabetes through specialized monitoring, medications, and recommendations."
         />
         <MediaTop
           imgSrc="../Assets/Services/Med Pre-Pours.jpg"
           imgLink="/med-pre-pours"
           btnName="Med Pre-Pours"
-          content="We offer med pre-poured packaging that bundles your medications together by date and time."
+          content="We provide med pre-poured medication packaging that organizes your medications based on both date and time."
         />
         <MediaTop
-          imgSrc="../Assets/Services/Medical Equipment.jpg"
+          imgSrc="../Assets/Home Page/Durable Medical Equipment.jpeg"
           imgLink="/durable-medical-equipment"
           btnName="Medical Equipment"
-          content="We carry a wide selection of medical equipment, including ambulatory aids, nebulizers and bathroom equipment."
+          content="We stock an extensive range of medical equipment, encompassing ambulatory aids, nebulizers, and bathroom essentials."
         />
         <MediaTop
           imgSrc="../Assets/Services/Health Screening.jpg"
           imgLink="/health-screenings"
           btnName="Health Screening"
-          content="We offer onsite health screenings that allow you to get more information on your health without having to make a trip to the doctor."
+          content="We provide on-site health screenings, giving you the opportunity to gather health information without the need for a visit to the doctor."
         />
       </div>
       <div className="inner-container">
@@ -35,25 +35,25 @@ const Services = () => {
           imgSrc="../Assets/Services/Immunixations.jpg"
           imgLink="/immunizations"
           btnName="Immunization"
-          content="We offer a variety of vaccines to keep you healthy. Contact us to learn more about our immunizations."
+          content="Explore our range of vaccines designed to support your well-being. Reach out to us for further details on our immunization options."
         />
         <MediaTop
           imgSrc="../Assets/Services/Leader Products.jpg"
           imgLink="/leader-products"
           btnName="Leader Products"
-          content="We proudly offer LEADER™ high-quality products which contain the same active ingredients as national brands, at a lower cost."
+          content="We take pride in providing LEADER™ high-quality products that feature identical active ingredients as national brands but come at a more affordable price."
         />
         <MediaTop
           imgSrc="../Assets/Services/Medication Adherence.jpg"
           imgLink="/medication-adherence"
           btnName="Medication Adherence"
-          content="Avoid medication non-adherence and let our pharmacists help you better manage your medications."
+          content="Prevent medication non-adherence by allowing our pharmacists to assist you in enhancing your medication management."
         />
         <MediaTop
           imgSrc="../Assets/Services/Medication Synchronization.jpg"
           imgLink="/medication-synchronization"
           btnName="Medication Synchronization"
-          content="Sync your prescriptions with our pharmacy and pick up all of your medications on the same day each month."
+          content="Synchronize your prescriptions with our pharmacy and collect all your medications on a consistent day each month."
         />
       </div>
       <div className="inner-container">
@@ -61,19 +61,19 @@ const Services = () => {
           imgSrc="../Assets/Services/Medication Management.jpg"
           imgLink="/medication-therapy-management"
           btnName="Medication Management"
-          content="Let our pharmacy team better help you manage you and your family's medications and health conditions."
+          content="Allow our pharmacy team to assist you in effectively managing the medications and health conditions of you and your family."
         />
         <MediaTop
           imgSrc="../Assets/Services/Nutrient Depletion Counseling.jpg"
           imgLink="/nutrient-depletion-counseling"
           btnName="Nutrient Depletion Counseling"
-          content="Our staff is trained in identifying drug-induced nutrient depletion and providing medication counseling to help."
+          content="Our team is skilled in recognizing nutrient depletion caused by medications and offers counseling to provide assistance."
         />
         <MediaTop
           imgSrc="../Assets/Services/Home Delivery.png"
           imgLink="/home-delivery"
           btnName="Home Delivery"
-          content="We offer free delivery to the nearby Orange area. Contact us for details or to schedule your free delivery."
+          content="Enjoy complimentary delivery within the nearby Orange area. Reach out to us for more information or to arrange your free delivery."
         />
       </div>
     </div>

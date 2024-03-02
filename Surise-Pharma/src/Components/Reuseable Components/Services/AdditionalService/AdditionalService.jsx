@@ -6,12 +6,12 @@ const AdditionalService = () => {
       <MediaLeft
         imgSrc="./Assets/Services/Additional Services/medication service.png"
         title="Medication Services"
-        content="24/7 Online Prescription Refills Secure Transfers"
+        content="Securely transfer and refill prescriptions online 24/7."
       />
       <MediaLeft
         imgSrc="./Assets/Services/Additional Services/patient resources.png"
         title="Patient Resources"
-        content="Treatment & Health Information"
+        content="Healthcare and Treatment Information."
       />
     </div>
   );

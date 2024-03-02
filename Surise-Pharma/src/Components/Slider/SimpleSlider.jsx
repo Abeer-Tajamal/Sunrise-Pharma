@@ -16,18 +16,18 @@ const MyCarousel = () => {
       backgroundImage: 'url("./Assets/Home Page/Diabetes Care.jpeg")',
       link: "/diabetes-specialized-care-center",
       title: "Diabetes Care",
-      description: "Let us help you understand and manage your diabetes",
+      description: "Allow us to assist you in comprehending and handling your diabetes",
     },
     {
       backgroundImage: 'url("./Assets/Home Page/Med Pre-Pours.jpg")',
       link: "/med-pre-pours",
       title: "Med Pre-Pours",
       description:
-        "We offer a multi-dose packaging that bundles your medications together by date and time",
+        "We provide multi-dose packaging that organizes your medications based on both date and time",
     },
     {
       backgroundImage:
-        'url("./Assets/Home Page/Durable Medical Equipment.jpeg")',
+        'url("./Assets/Home Page/Medical Equipments.jpg")',
       link: "/durable-medical-equipment",
       title: "Durable Medical Equipment",
       description: "Available for purchase and rental",
@@ -48,34 +48,34 @@ const MyCarousel = () => {
       backgroundImage: 'url("./Assets/Home Page/Health Screening.jpeg")',
       link: "/health-screenings",
       title: "Health Screenings",
-      description: "Pharmacist performing health screening on patient",
+      description: "The pharmacist is conducting a health screening for the patient",
     },
     {
       backgroundImage: 'url("./Assets/Home Page/Immunization.jpeg")',
       link: "/immunizations",
       title: "Immunizations",
-      description: "We offer a variety of vaccines to keep you healthy",
+      description: "We provide a range of vaccines to ensure your well-being",
     },
     {
       backgroundImage: 'url("./Assets/Home Page/Leader Products.jpg")',
       link: "/leader-products",
       title: "Leader Products",
       description:
-        "We proudly offer LEADER™ high-quality products which contain the same active ingredients as national brands, at a lower cost",
+        "We take pride in presenting LEADER™ high-quality products, featuring identical active ingredients as national brands but at a more affordable price",
     },
     {
       backgroundImage: 'url("./Assets/Home Page/Medication Adherence.jpg")',
       link: "/medication-adherence",
       title: "Medication Adherence",
       description:
-        "Avoid medication non-adherence and let our pharmacists help you better manage your medications",
+        "Prevent medication non-adherence by allowing our pharmacists to assist you in effectively managing your medications",
     },
     {
       backgroundImage:
         'url("./Assets/Home Page/Medication Synchronization.jpeg")',
       link: "/medication-synchronization",
       title: "Medication Synchronization",
-      description: "Pick up all of your medications on the same day each month",
+      description: "Ensure you collect all your medications on a specific day each month",
     },
     {
       backgroundImage:
@@ -83,7 +83,7 @@ const MyCarousel = () => {
       link: "/medication-therapy-management",
       title: "Medication Therapy Management",
       description:
-        "We can help you manage your medications and health conditions",
+        "Assisting you in overseeing both your medications and health conditions is within our capabilities",
     },
     {
       backgroundImage:
@@ -91,20 +91,20 @@ const MyCarousel = () => {
       link: "/nutrient-depletion-counseling",
       title: "Nutrition Depletion Counseling",
       description:
-        "Our staff is trained in identifying drug-induced nutrient depletion and providing medication counseling to help",
+        "Our team is skilled in recognizing drug-induced nutrient depletion and offers counseling on medication to assist",
     },
-    {
-      backgroundImage: 'url("./Assets/Home Page/Pet Care.jpeg")',
-      link: "/",
-      title: "Pet Care",
-      description:
-        "Prescriptions and medications specifically for your furry friend",
-    },
+    // {
+    //   backgroundImage: 'url("./Assets/Home Page/Pet Care.jpeg")',
+    //   link: "/",
+    //   title: "Pet Care",
+    //   description:
+    //     "Prescriptions and medications specifically for your furry friend",
+    // },
     {
       backgroundImage: 'url("./Assets/Home Page/Free Delivery.jpeg")',
       link: "/home-delivery",
       title: "Free Delivery",
-      description: "Let us come to you",
+      description: "Allow us to come to your location",
     },
   ];
 

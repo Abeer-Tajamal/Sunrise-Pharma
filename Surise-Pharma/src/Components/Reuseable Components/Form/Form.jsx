@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import "./Form.css";
 import InputIcon from "@mui/icons-material/Input";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Modal from "@mui/material/Modal";
+import "./Form.css";
 
 function Step1({ onNext }) {
   const [firstName, setFirstName] = useState("");
@@ -99,10 +100,11 @@ function Step1({ onNext }) {
 
 function Step2({ onNext }) {
   const [deliverType, setDeliverType] = useState("");
+  const [address, setAddress] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onNext({ deliverType });
+    onNext({ deliverType, address });
   };
 
   return (
@@ -119,15 +121,29 @@ function Step2({ onNext }) {
       </div>
       <div className="label-input">
         <label className="form-label">Pickup Method</label>
-        <input
+        <select
           className="menu-option"
-          type="text"
           value={deliverType}
           onChange={(e) => setDeliverType(e.target.value)}
           required
-        />
+        >
+          <option value="">--Please select--</option>
+          <option value="PickUp">Pick Up</option>
+          <option value="Delivery">Delivery</option>
+        </select>
       </div>
-      <div>
+      {deliverType === "Delivery" && (
+        <div className="last-input">
+          <label>Address</label>
+          <input
+            type="text"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+            required
+          />
+        </div>
+      )}
+      <div className="btn-div">
         <button type="submit" className="next-btn">
           Next
         </button>
@@ -137,12 +153,39 @@ function Step2({ onNext }) {
 }
 
 function Step3({ onNext }) {
-  const [RxNumber, setRxNumber] = useState("");
-  const [RxName, setRxName] = useState("");
+  const [medicines, setMedicines] = useState([]);
+  const [open, setOpen] = useState(false);
+  const [medicineNumber, setMedicineNumber] = useState("");
+  const [medicineName, setMedicineName] = useState("");
+
+  const handleChange = (index, event) => {
+    const { name, value } = event.target;
+    const updatedMedicines = [...medicines];
+    updatedMedicines[index][name] = value;
+    setMedicines(updatedMedicines);
+  };
+
+  const handleAddMedicine = () => {
+    setOpen(true);
+  };
+
+  const handleModalSubmit = () => {
+    if (medicineNumber > 99999 || medicineNumber < 40000)
+      alert("Rx Number must be between 39999 and 99999");
+    else {
+      setMedicines([
+        ...medicines,
+        { number: medicineNumber, name: medicineName },
+      ]);
+      setMedicineNumber("");
+      setMedicineName("");
+      setOpen(false);
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onNext({ RxNumber, RxName });
+    onNext({ medicines });
   };
 
   return (
@@ -151,27 +194,72 @@ function Step3({ onNext }) {
         <InputIcon className="title-icon" />
         <h2>Medications List</h2>
       </div>
-      <div className="last-input">
-        <label>Rx Number:</label>
-        <input
-          type="text"
-          value={RxNumber}
-          onChange={(e) => setRxNumber(e.target.value)}
-          required
-        />
+      {medicines.map((medicine, index) => (
+        <div key={index} style={{ width: "100%" }}>
+          <div className="display-medicine">
+            <label>Rx Number:</label>&nbsp;
+            <input
+              type="text"
+              value={medicine.number}
+              onChange={(e) => handleChange(index, e)}
+            />
+            &nbsp;
+            <label>Rx Name:</label>&nbsp;
+            <input
+              type="text"
+              value={medicine.name}
+              onChange={(e) => handleChange(index, e)}
+            />
+          </div>
+        </div>
+      ))}
+      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+        <div>
+          <button
+            className="next-btn"
+            type="button"
+            onClick={handleAddMedicine}
+          >
+            Add Medicine
+          </button>
+        </div>
+        &nbsp;
+        <div>
+          <button className="next-btn" type="submit">
+            Submit
+          </button>
+        </div>
       </div>
-      <div className="last-input">
-        <label>Rx Name:</label>
-        <input
-          type="text"
-          value={RxName}
-          onChange={(e) => setRxName(e.target.value)}
-          required
-        />
-      </div>
-      <button className="next-btn" type="submit">
-        Submit
-      </button>
+
+      <Modal open={open} onClose={() => setOpen(false)}>
+        <div className="modal-content">
+          <h2>Add Medicine</h2>
+          <label>
+            RX Number:&nbsp;
+            <input
+              type="number"
+              value={medicineNumber}
+              onChange={(event) => setMedicineNumber(event.target.value)}
+              required
+              min="40000"
+              max="99999"
+            />
+            &nbsp;
+          </label>
+          <label>
+            RX Name: &nbsp;
+            <input
+              type="text"
+              value={medicineName}
+              onChange={(event) => setMedicineName(event.target.value)}
+            />
+          </label>
+          &nbsp;
+          <button className="next-btn" onClick={handleModalSubmit}>
+            Add
+          </button>
+        </div>
+      </Modal>
     </form>
   );
 }
@@ -202,6 +290,7 @@ function Stepper() {
         console.error("Error sending mail:", error);
         alert("Error occurred");
       });
+    console.log({ ...formData, ...data });
   };
 
   return (

@@ -6,12 +6,6 @@ const Services = () => {
     <div className="main-container">
       <div className="inner-container">
         <MediaTop
-          imgSrc="../Assets/Home Page/Covid-19 Testing.jpg"
-          imgLink="/covid-19-testing"
-          btnName="COVID-19 Testing"
-          content="In an effort to reduce the spread of COVID-19, we offer our community testing that can detect all variants. Contact us today to get tested."
-        />
-        <MediaTop
           imgSrc="../Assets/Services/Diabetes Care.jpg"
           imgLink="/diabetes-specialized-care-center"
           btnName="Diabetes Specialized Care"
@@ -29,20 +23,14 @@ const Services = () => {
           btnName="Medical Equipment"
           content="We carry a wide selection of medical equipment, including ambulatory aids, nebulizers and bathroom equipment."
         />
-      </div>
-      <div className="inner-container">
-        <MediaTop
-          imgSrc="../Assets/Services/Erectile Dysfuntion.jpg"
-          imgLink="/erectile-dysfunction"
-          btnName="Erectile Dysfunction"
-          content="You can feel comfortable discussing your ED questions and concerns with our pharmacist"
-        />
         <MediaTop
           imgSrc="../Assets/Services/Health Screening.jpg"
           imgLink="/health-screenings"
           btnName="Health Screening"
           content="We offer onsite health screenings that allow you to get more information on your health without having to make a trip to the doctor."
         />
+      </div>
+      <div className="inner-container">
         <MediaTop
           imgSrc="../Assets/Services/Immunixations.jpg"
           imgLink="/immunizations"
@@ -55,8 +43,6 @@ const Services = () => {
           btnName="Leader Products"
           content="We proudly offer LEADER™ high-quality products which contain the same active ingredients as national brands, at a lower cost."
         />
-      </div>
-      <div className="inner-container">
         <MediaTop
           imgSrc="../Assets/Services/Medication Adherence.jpg"
           imgLink="/medication-adherence"
@@ -69,6 +55,8 @@ const Services = () => {
           btnName="Medication Synchronization"
           content="Sync your prescriptions with our pharmacy and pick up all of your medications on the same day each month."
         />
+      </div>
+      <div className="inner-container">
         <MediaTop
           imgSrc="../Assets/Services/Medication Management.jpg"
           imgLink="/medication-therapy-management"
@@ -81,8 +69,6 @@ const Services = () => {
           btnName="Nutrient Depletion Counseling"
           content="Our staff is trained in identifying drug-induced nutrient depletion and providing medication counseling to help."
         />
-      </div>
-      <div className="inner-container">
         <MediaTop
           imgSrc="../Assets/Services/Home Delivery.png"
           imgLink="/home-delivery"
@@ -95,3 +81,15 @@ const Services = () => {
 };
 
 export default Services;
+/* <MediaTop
+    imgSrc="../Assets/Home Page/Covid-19 Testing.jpg"
+    imgLink="/covid-19-testing"
+    btnName="COVID-19 Testing"
+    content="In an effort to reduce the spread of COVID-19, we offer our community testing that can detect all variants. Contact us today to get tested."
+  /> 
+ <MediaTop
+  imgSrc="../Assets/Services/Erectile Dysfuntion.jpg"
+  imgLink="/erectile-dysfunction"
+  btnName="Erectile Dysfunction"
+  content="You can feel comfortable discussing your ED questions and concerns with our pharmacist"
+/> */

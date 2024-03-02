@@ -1,4 +1,3 @@
-import Home from "../StickyHeader/StickyHeader";
 import Address from "../Reuseable Components/Address/Address";
 import Footer from "../Reuseable Components/Footer/Footer";
 import NavBar from "../Reuseable Components/NavBar/NavBar";
@@ -16,7 +15,6 @@ import TitleText from "../TitleText/TitleText";
 const HomePage = () => {
   return (
     <>
-      <Home />
       <Address />
       <NavBar />
       <br />

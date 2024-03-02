@@ -101,6 +101,17 @@ const Footer = () => {
         <div>
           <ul>
             <li>
+              <strong>Services</strong>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>
               <strong>Leave Us A Review</strong>
             </li>
             <li>

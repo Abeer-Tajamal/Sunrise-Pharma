@@ -5,7 +5,6 @@ import Navbar from "../Reuseable Components/NavBar/NavBar";
 import CenteredHeading from "../Reuseable Components/PageHeader/PageHeader";
 import AdditionalService from "../Reuseable Components/Services/AdditionalService/AdditionalService";
 import Services from "../Reuseable Components/Services/Services";
-import Home from "../StickyHeader/StickyHeader";
 
 const ServicesPage = () => {
   useDynamicPageTitle(
@@ -14,7 +13,6 @@ const ServicesPage = () => {
 
   return (
     <>
-      <Home />
       <Address />
       <Navbar />
       <CenteredHeading heading="Pharmacy Services" />

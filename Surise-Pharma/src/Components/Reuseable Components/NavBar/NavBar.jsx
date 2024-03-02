@@ -103,7 +103,7 @@ const Navbar = () => {
                 >
                   <li>Pharmacy</li>
                 </Link>
-                <Link
+                {/* <Link
                   to="/covid-19-testing"
                   onClick={() => handleTabClick("COVID-19 Testing")}
                   style={{
@@ -115,7 +115,7 @@ const Navbar = () => {
                   }}
                 >
                   <li>COVID-19 Testing</li>
-                </Link>
+                </Link> */}
                 <Link
                   to="/diabetes-specialized-care-center"
                   onClick={() =>
@@ -155,7 +155,7 @@ const Navbar = () => {
                 >
                   <li>Durable Medical Equipment</li>
                 </Link>
-                <Link
+                {/* <Link
                   to="/erectile-dysfunction"
                   onClick={() => handleTabClick("Erectile Dysfunction")}
                   style={{
@@ -167,7 +167,7 @@ const Navbar = () => {
                   }}
                 >
                   <li>Erectile Dysfunction</li>
-                </Link>
+                </Link> */}
                 <Link
                   to="/health-screenings"
                   onClick={() => handleTabClick("Health Screenings")}

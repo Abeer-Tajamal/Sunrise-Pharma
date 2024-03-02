@@ -11,9 +11,9 @@ import HomeDeliveryPage from "./Components/Pages/HomeDeliveryPage";
 import MedicationSynchronizationPage from "./Components/Pages/MedicationSynchronizationPage";
 import MedicationAdherencePage from "./Components/Pages/MedicationAdherencePage";
 import LeaderProductsPage from "./Components/Pages/LeaderProductsPage";
-import ErectileDysfunctionPage from "./Components/Pages/ErectileDysfunctionPage";
 import DiabetesSpecializedCareCenterPage from "./Components/Pages/DiabetesSpecializedCareCenterPage";
-import Covid19Page from "./Components/Pages/Covid19Page";
+// import ErectileDysfunctionPage from "./Components/Pages/ErectileDysfunctionPage";
+// import Covid19Page from "./Components/Pages/Covid19Page";
 import TemsConditionPage from "./Components/Pages/TermsConditionsPage";
 import PrivacyPolicyPage from "./Components/Pages/PrivacyPolicyPage";
 import MyForm from "./Components/Reuseable Components/Form/Form";
@@ -34,17 +34,17 @@ const routesConfig = [
   },
   { path: "/medication-adherence", element: <MedicationAdherencePage /> },
   { path: "/leader-products", element: <LeaderProductsPage /> },
-  { path: "/erectile-dysfunction", element: <ErectileDysfunctionPage /> },
   {
     path: "/diabetes-specialized-care-center",
     element: <DiabetesSpecializedCareCenterPage />,
   },
-  { path: "/covid-19-testing", element: <Covid19Page /> },
   { path: "/terms-conditions", element: <TemsConditionPage /> },
   { path: "/privacy-policy", element: <PrivacyPolicyPage /> },
   { path: "/refill", element: <MyForm /> },
   { path: "/coronavirus", element: <CoronaVirusPage /> },
   { path: "/pharmacy-near-me-orange-ct", element: <TransferAPrescription /> },
+  // { path: "/erectile-dysfunction", element: <ErectileDysfunctionPage /> },
+  // { path: "/covid-19-testing", element: <Covid19Page /> },
 ];
 
 function App() {

@@ -3,7 +3,6 @@ import Address from "../Reuseable Components/Address/Address";
 import useDynamicPageTitle from "../Reuseable Components/DynamicPageTitle/DynamicPageTitle";
 import Footer from "../Reuseable Components/Footer/Footer";
 import Navbar from "../Reuseable Components/NavBar/NavBar";
-import Home from "../StickyHeader/StickyHeader";
 
 const CoronaVirusPage = () => {
   useDynamicPageTitle(
@@ -12,7 +11,6 @@ const CoronaVirusPage = () => {
 
   return (
     <>
-      <Home />
       <Address />
       <Navbar />
       <Coronavirus />

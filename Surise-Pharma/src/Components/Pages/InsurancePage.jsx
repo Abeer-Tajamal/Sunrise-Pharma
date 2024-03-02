@@ -1,4 +1,3 @@
-import Home from "../StickyHeader/StickyHeader";
 import Address from "../Reuseable Components/Address/Address";
 import MediaRight from "../Reuseable Components/Media Right/MediaRight";
 import DynamicPageTitle from "../Reuseable Components/DynamicPageTitle/DynamicPageTitle";
@@ -26,7 +25,6 @@ const InsurancePage = () => {
 
   return (
     <>
-      <Home />
       <Address />
       <Navbar />
       <div className="container-media">

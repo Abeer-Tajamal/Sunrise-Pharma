@@ -12,11 +12,11 @@ const MedPrePoursPage = () => {
 
   const image = "./Assets/Services/Med Pre-Pours/Med Pre-Pours.jpg";
   const description =
-    "Med Pre-pours for the convenience of the people. We support you by pre-organizing the medication in a timely fashion so you don't have to. We offer a variety of ways to serve this purpose:";
+    "Med Pre-pours stand as a testament to our commitment to your convenience. We go the extra mile by efficiently pre-organizing your medications, sparing you the effort. Our diverse range of services offers multiple avenues to meet this goal, ensuring a hassle-free and tailored experience for your medication needs:";
   const arrayList = [
-    "Dispill: Medicines arranged according to a specific time distinguishable from the other time-slot by colors.",
-    "Blister Packing: Weekly/Monthly blisters for Morning/Afternoon/Evenings or at Bedtime.",
-    "Med-Box: East to open plastic med-boxes with specified days and times.",
+    "Dispill: Medications organized based on designated time intervals, with each slot distinguished by distinct colors.",
+    "Blister Packing: Weekly or monthly blister packs designed for morning, afternoon, evening, or bedtime doses.",
+    "Med-Box: Easy-to-open plastic medication boxes with designated days and times.",
   ];
 
   return (

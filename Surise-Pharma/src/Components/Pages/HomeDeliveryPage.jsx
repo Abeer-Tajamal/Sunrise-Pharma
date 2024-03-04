@@ -12,11 +12,11 @@ const HomeDeliveryPage = () => {
 
   const image = "./Assets/Services/Home Delivery.png";
   const description =
-    "Don't have time to make it to the pharmacy? No problem. We offer free delivery to the nearby Orange area for your convenience.";
+    "Unable to make it to the pharmacy? No worries. We provide complimentary delivery to the neighboring Orange area for your convenience.";
   const description2 =
-    "We can also deliver any OTC items you request along with your prescription.";
+    "Additionally, we are able to deliver any over-the-counter items you may need along with your prescription.";
   const description3 =
-    "Contact us for details or to schedule your next delivery.";
+    "Reach out to us for more information or to arrange your upcoming delivery.";
   const arrayList = [];
 
   return (

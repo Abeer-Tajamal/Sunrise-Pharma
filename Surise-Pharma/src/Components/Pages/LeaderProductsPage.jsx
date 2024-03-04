@@ -12,7 +12,7 @@ const LeaderProductsPage = () => {
 
   const image = "./Assets/Services/Leader Producrs/Leader Products.png";
   const description =
-    "We offer LEADER™ high-quality products which contain the same active ingredients as national brands, at a lower cost.";
+    "We provide LEADER™ high-quality products that incorporate identical active ingredients found in national brands but at a more affordable price.";
   const arrayList = [];
 
   return (

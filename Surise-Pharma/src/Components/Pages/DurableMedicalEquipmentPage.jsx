@@ -12,15 +12,15 @@ const DurableMedicalEquipmentPage = () => {
 
   const image = "./Assets/Services/Medical Equipment.jpg";
   const description =
-    "Our pharmacy offers an extensive variety of medical equipment and supplies.";
+    "Our pharmacy provides a wide range of medical equipment and supplies.";
   const description2 =
-    "Our medical equipment may include, but is not limited to:";
+    "Our range of medical equipment encompasses, but is not restricted to:";
   const description4 =
-    "If you are in need of any medical equipment or supplies or just have a question, ask a staff member today. Our staff will make it as easy as possible to get the equipment you need, including the billing. We will bill Medicare and most insurance companies.";
+    "Should you require medical equipment, supplies, or have any inquiries, don't hesitate to consult with our staff today. We strive to simplify the process of obtaining the necessary equipment, including handling the billing. We are adept at billing Medicare and most insurance companies, ensuring a seamless experience for you.";
   const arrayList = [
-    "Equipment to assist walking such as canes and walkers",
-    "Bathroom equipment such as benches",
-    "Orthopedic supplies such as back support belts and compression stockings",
+    "Walking aids like canes and walkers are available in our equipment inventory.",
+    "Bathroom fixtures like benches are part of our available equipment.",
+    "Orthopedic items like back support belts and compression stockings are included in our inventory.",
     "Nebulizers",
   ];
 

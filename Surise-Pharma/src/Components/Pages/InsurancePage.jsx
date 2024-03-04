@@ -11,7 +11,7 @@ const InsurancePage = () => {
   const image = "./Assets/Insurance/Insurance.jpg";
   const title = "Insurance";
   const description =
-    "We accept most major insurance plans. Our top insurance company partners include:";
+    "We welcome the majority of major insurance plans, and among our key insurance partners are:";
   const arrayList = [
     "Husky",
     "Cigna",

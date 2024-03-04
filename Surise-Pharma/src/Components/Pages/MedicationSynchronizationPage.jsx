@@ -13,11 +13,11 @@ const HomeDeliveryPage = () => {
   const image =
     "./Assets/Services/Medicatiorn Synchronization/Medication Synchronization.jpg";
   const description =
-    "Do you ever find it difficult to keep up with your medication refills and picking up your medications? If you answered yes, you may benefit from medication synchronization.";
+    "Do you often encounter difficulties in keeping track of your medication refills and collecting your prescriptions? If your answer is yes, you might find significant benefits in considering medication synchronization. This service ensures a streamlined and coordinated approach to managing your medications, making the process more convenient and efficient for you.";
   const description2 =
-    "Med Synchronization, also called med sync, is a program we offer here at the pharmacy to help synchronize your medication refills so that you will be able to pick up ALL of your medications on a single day each month.";
+    "Medication Synchronization, also known as med sync, is a program available at our pharmacy designed to align your medication refills. This enables you to conveniently collect ALL your medications on a single day each month.";
   const description3 =
-    "Speak to a staff member today about how we can get you set up on med sync.";
+    "Engage in a conversation with one of our staff members today to explore the process of enrolling in med sync.";
   const arrayList = [];
 
   return (

@@ -13,9 +13,9 @@ const AboutUsPage = () => {
 
   const image = "./Assets/About us/About Us.jpg";
   const description =
-    "Sunrise Pharmacy lives on its tagline ”Care Beyond Drugs” in serving our patients. We provide excellent customer service not only for your prescriptions needs but also for Natural Therapies and Organic Therapies to the Orange, West Haven, Milford, Derby, New Haven and Woodbridge communities.";
+    "Sunrise Pharmacy embodies the essence of its tagline, 'Care Beyond Drugs,' in catering to our patients. We deliver outstanding customer service, addressing not only your prescription requirements but also extending our expertise to Natural Therapies and Organic Therapies for the Orange, West Haven, Milford, Derby, New Haven, and Woodbridge communities.";
   const description2 =
-    "Our staff at Sunrise Pharmacy ensures the efficient free-flowing healthcare process by coordinating with Doctors and Nurses. Let’s join hands for all your healthcare needs.";
+    "The dedicated staff at Sunrise Pharmacy is committed to ensuring an efficient and free-flowing healthcare process. Through close coordination with doctors and nurses, we strive to provide comprehensive support. Let's join hands and embark on a journey to address all your healthcare needs with care and expertise.";
   const arrayList = [];
 
   return (

@@ -12,11 +12,11 @@ const HealthScreeningsPage = () => {
 
   const image = "./Assets/Services/Health Screening/Health Screening.jpg";
   const description =
-    "Want to get a health checkup without going to the doctor? We offer onsite health screenings that allow you to get more information on your health without having to make a trip to the doctor.";
+    "Looking for a health checkup without visiting the doctor? Take advantage of our onsite health screenings, providing valuable health information without the need for a doctor's visit.";
   const description2 =
-    "We offer a variety of screenings, including the following:";
+    "We provide an array of screenings, including but not limited to the following:";
   const description4 =
-    "Our highly qualified staff can provide these screenings to give you more information on your health, health goals, and ways to reach those goals. Speak to one of our staff members to learn more about our health screenings.";
+    "Our exceptionally skilled staff is well-equipped to conduct these screenings, offering valuable insights into your health, health objectives, and strategies to achieve them. Connect with one of our staff members to explore further details about our health screening services.";
   const arrayList = ["Blood pressure", "Blood glucose (sugar)", "Cholesterol"];
 
   return (

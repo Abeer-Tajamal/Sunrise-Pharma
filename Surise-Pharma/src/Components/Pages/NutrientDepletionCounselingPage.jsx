@@ -13,25 +13,25 @@ const NutrientDepletionCounselingPage = () => {
 
   const image = "./Assets/Services/Nutrient Depletion Counseling.jpg";
   const description =
-    "Here at Sunrise Pharmacy, our goal is to ensure you are receiving the maximum benefit from your medications.";
+    "At Sunrise Pharmacy, our dedicated goal is to ensure that you, our valued customer, are experiencing the maximum benefit from the medications we provide.";
   const description4 =
-    "If you answered yes to any of these questions, you may benefit from nutrient depletion counseling.";
+    "If you responded affirmatively to any of these inquiries, you might find value in nutrient depletion counseling.";
   const description5 =
-    "While medications are a great way to help you manage your symptoms, they can also deplete your body of vital nutrients. Fortunately, our expert pharmacy staff is trained in identifying drug-induced nutrient depletion and providing medication counseling to help your medication work with you, not against you.";
+    "While medications effectively assist in symptom management, they may inadvertently deplete crucial nutrients from your body. Luckily, our proficient pharmacy staff is adept at recognizing drug-induced nutrient depletion and offers medication counseling to ensure your medication aligns with your overall well-being rather than working against it.";
   const description6 =
-    "With this program, our knowledgeable staff will evaluate your medications, answer any questions you may have, and discuss suggested diet changes, recommenced vitamins and supplements, and more. If you feel like nutrient depletion counseling is right for you, click the button below to schedule a personal consultation with one of our skilled staff members today.";
+    "Through this initiative, our informed staff will assess your medications, address your queries, and engage in discussions about recommended dietary modifications, suggested vitamins and supplements, and more. If you believe nutrient depletion counseling could benefit you, click the button below to arrange a personal consultation with one of our proficient staff members today.";
   const arrayList = [
-    "Are you experiencing side effects from a medication that you are currently taking?",
-    "Are you taking a medication that depletes other key nutrients?",
-    "Are you looking for ways to boost your overall immunity, health, and wellness?",
-    "Are you having trouble sleeping on your medication?",
-    "Do you lack energy on a daily basis?",
+    "Are you currently encountering any side effects from the medication you are taking?",
+    "Is the medication you're currently taking causing a depletion of essential nutrients?",
+    "Are you seeking methods to enhance your overall immunity, health, and well-being?",
+    "Are you experiencing difficulty sleeping due to your medication?",
+    "Are you feeling consistently low on energy every day?",
   ];
 
   const description7 =
-    "Our pharmacists are also specially trained to recommend vitamins and supplements that may help offset drug induced nutrient depletions and expand your wellness.";
+    "Our pharmacists undergo specialized training to suggest vitamins and supplements that can potentially counteract drug-induced nutrient depletions, contributing to your overall wellness.";
   const description8 =
-    "We carry an extensive line of vitamins and supplements that are clinically-tested and hand-picked by our team, including:";
+    "We offer a comprehensive selection of clinically-tested vitamins and supplements, carefully curated by our team, including:";
   const arrayList2 = [
     "Probiotics",
     "Vitamin B",

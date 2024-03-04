@@ -13,11 +13,11 @@ const MedicationAdherencePage = () => {
   const image =
     "./Assets/Services/Medication Adherence/Medication Adherence.jpeg";
   const description =
-    "An estimated 50 percent or more of medications for chronic conditions, such as high cholesterol and diabetes, are not taken as prescribed.";
+    "Approximately 50 percent or more of medications prescribed for chronic conditions, like high cholesterol and diabetes, are not adhered to as directed.";
   const description2 =
-    "Medication non-adherence can lead to worsening health conditions, hospitalizations and death. Whatever the reason is for medication non-adherence, we have a solution for you. Ask one of our team members how we can help you today.";
+    "Non-adherence to medication can result in deteriorating health conditions, hospitalizations, and even fatalities. Regardless of the reason for medication non-adherence, we have a solution tailored for you. Consult with one of our team members today to discover how we can assist you.";
   const description3 =
-    "Ask any of our staff today about our pill-packaging service and how you can get signed up.";
+    "Inquire with any of our staff today about our pill-packaging service and the steps to get enrolled.";
   const arrayList = [];
 
   return (

@@ -12,9 +12,9 @@ const ImmunizationsPage = () => {
 
   const image = "./Assets/Services/Immunization/Immunization.jpg";
   const description =
-    "When it comes to disease prevention, immunizations are key. Getting vaccinated protects you and those around you. Our main focus is to help you and your loved ones stay up-to-date on the recommended vaccines. We offer a variety of immunizations. Some of the vaccinations we offer are listed below:";
+    "In the realm of disease prevention, immunizations play a crucial role. Vaccination not only safeguards you but also those in your vicinity. Our primary emphasis is to assist you and your loved ones in staying current with recommended vaccines. We provide a diverse range of immunizations, and some of the vaccines we offer are detailed below:";
   const description4 =
-    "Our highly qualified staff can easily administer these immunizations here at the pharmacy. Speak to a staff member today about the immunizations we offer.";
+    "Our proficient staff can readily administer these immunizations right here at the pharmacy. Connect with a staff member today to discuss the range of immunizations we provide.";
   const arrayList = [
     "COVID-19",
     "Flu",

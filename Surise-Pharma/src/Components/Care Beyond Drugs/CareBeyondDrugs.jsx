@@ -6,14 +6,13 @@ const CareBeyondDrugs = () => {
       <div className="CareSection">
         <h2 className="main-heading">Care Beyond Drugs</h2>
         <p className="inner-text-heading">
-          We're a Modern Pharmacy With Old-School Values
+          A contemporary pharmacy with traditional values.
         </p>
         <div className="mediaRight">
           <div>
-            At Sunrise Pharmacy, we believe that being a local independent
-            pharmacy means providing healthcare and medication services to our
-            patients that are customized to meet their needs. Visit us today and
-            let us take care of you.
+            At Sunrise Pharmacy, we are firm believers in the essence of being a local independent
+            pharmacy, offering personalized healthcare and medication services tailored to the unique
+            needs of our patients. Pay us a visit today, and allow us the opportunity to take care of you.
           </div>
           <img
             className="round-image"

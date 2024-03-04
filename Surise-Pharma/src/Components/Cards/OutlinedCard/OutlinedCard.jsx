@@ -8,7 +8,7 @@ const OutlinedCard = () => {
   const cardProps1 = {
     title: "Refill a Prescription",
     description:
-      "We fill new and existing prescriptions in-store, by phone and online for your convenience.",
+      "We process both new and existing prescriptions conveniently, whether it's in-store, over the phone, or online, ensuring we cater to your needs effectively.",
     buttonText: "Refill Now",
     buttonLink: "/account",
     buttonTarget:"_blank"
@@ -17,7 +17,7 @@ const OutlinedCard = () => {
   const cardProps2 = {
     title: "Transfer a Prescription",
     description:
-      "Transfer your prescriptions to our pharmacy using our simple and secure online transfer form.",
+      "Effortlessly shift your prescriptions to our pharmacy by utilizing our uncomplicated and secure online transfer form.",
     buttonText: "Transfer Now",
     buttonLink: "/pharmacy-near-me-orange-ct"
   };
@@ -25,7 +25,7 @@ const OutlinedCard = () => {
   const cardProps3 = {
     title: "Contact Us",
     description:
-      "Visit us in store or get in touch with a member of our pharmacy staff. We're always happy to assist you.",
+      "Drop by our store or contact one of our pharmacy team members. We're here to help and always ready to assist you.",
     buttonText: "Get in touch",
     buttonLink: "/contact"
   };

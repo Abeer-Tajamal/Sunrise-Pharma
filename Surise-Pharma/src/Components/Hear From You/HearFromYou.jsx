@@ -10,9 +10,8 @@ const HearFromYou = () => {
           <img src="./Assets/Home Page/Sunrise Pharmacy Logo.png" alt="" />
           <h2>We'd Love to Hear From You</h2>
           <p>
-            At Sunrise Pharmacy, we’re committed to helping you live a healthier
-            life. Our pharmacy staff would be happy to help you with any
-            questions you may have.
+            At Sunrise Pharmacy, our dedication lies in supporting you to lead a healthier life.
+            Our pharmacy team is ready and willing to assist with any inquiries you may have.
           </p>
           <ColorButtons
             buttonLink="mailto:sunrisepharmrx@gmail.com"

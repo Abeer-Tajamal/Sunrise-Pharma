@@ -6,21 +6,21 @@ const Services = () => {
     image: "./Assets/Home Page/Welocme to Sunrise Phasrmacy.jpg",
     title: "Learn About Us »",
     description:
-      "Sunrise Pharmacy combines high quality products with personalized care. Our staff will be happy to help you with any questions you may have.",
+      "At Sunrise Pharmacy, we blend top-notch products with individualized care. Our team is eager to assist you with any inquiries you might have.",
   };
 
   const ServiceCard2 = {
     image: "./Assets/Home Page/Our Services.jpg",
     title: "Our Services »",
     description:
-      "We offer a wide variety of services including conventional prescription filling, medical equipment, medicare open enrollment and much more.",
+      "We provide an extensive range of services, encompassing traditional prescription filling, medical equipment, Medicare open enrollment, and more.",
   };
 
   const ServiceCard3 = {
     image: "./Assets/Home Page/Health News.jpg",
     title: "Explore Our Health News »",
     description:
-      "Check out our weekly health news blog, or subscribe to our newsletter and receive updates on health articles, promotions, specials and much more.",
+      "Explore our weekly health news blog, or sign up for our newsletter to receive updates on health articles, promotions, specials, and more.",
   };
 
   return (

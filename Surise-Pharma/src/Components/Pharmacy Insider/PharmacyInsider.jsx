@@ -8,9 +8,9 @@ const PharmacyInsider = () => {
         <div>
           <br />
           <br />
-          <h2>Become a Pharmacy Insider</h2>
+          <h2>Join the Pharmacy Insider community.</h2>
           <p>
-            Subscribe to our newsletter for promotions, health news and savings
+            Join our newsletter to receive promotions, health updates, and exclusive savings.
           </p>
           <br />
           <input type="text" id="email" placeholder="Email address" />

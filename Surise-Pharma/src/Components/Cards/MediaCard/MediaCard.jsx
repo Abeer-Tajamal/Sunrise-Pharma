@@ -6,28 +6,28 @@ const MediaCard = () => {
     image: "./Assets/Home Page/Pill packaging.png",
     title: "Pill Packaging",
     description:
-      "Our custom medication packaging organizes your prescriptions for you.",
+      "Our specialized medication packaging arranges your prescriptions in an organized manner.",
   };
 
   const cardContent2 = {
     image: "./Assets/Home Page/Prescription Filling.png",
     title: "Easy Prescription",
     description:
-      "We fill new and existing prescriptions in-store, by phone and online for your convenience.",
+      "We process both new and existing prescriptions conveniently, whether it's in-store, over the phone, or online, ensuring we cater to your needs effectively.",
   };
 
   const cardContent3 = {
     image: "./Assets/Home Page/Express Delivery.png",
     title: "Express Delivery",
     description:
-      "We offer express local delivery and shipping at no cost to you.",
+      "We provide complimentary express local delivery and shipping for your convenience.",
   };
 
   const cardContent4 = {
     image: "./Assets/Home Page/Medication Savings.png",
     title: "Medication Savings",
     description:
-      "Our pharmacists work with you to coordinate benefits and find financial assistance.",
+      "Our pharmacists collaborate with you to align benefits and explore financial assistance options.",
   };
 
   return (

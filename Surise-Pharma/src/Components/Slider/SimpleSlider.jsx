@@ -16,7 +16,8 @@ const MyCarousel = () => {
       backgroundImage: 'url("./Assets/Home Page/Diabetes Care.jpeg")',
       link: "/diabetes-specialized-care-center",
       title: "Diabetes Care",
-      description: "Allow us to assist you in comprehending and handling your diabetes",
+      description:
+        "Allow us to assist you in comprehending and handling your diabetes",
     },
     {
       backgroundImage: 'url("./Assets/Home Page/Med Pre-Pours.jpg")',
@@ -26,29 +27,17 @@ const MyCarousel = () => {
         "We provide multi-dose packaging that organizes your medications based on both date and time",
     },
     {
-      backgroundImage:
-        'url("./Assets/Home Page/Medical Equipments.jpg")',
+      backgroundImage: 'url("./Assets/Home Page/Medical Equipments.jpg")',
       link: "/durable-medical-equipment",
       title: "Durable Medical Equipment",
       description: "Available for purchase and rental",
     },
-    // {
-    //   backgroundImage: 'url("./Assets/Home Page/Covid-19 Testing.jpg")',
-    //   link: "/covid-19-testing",
-    //   title: 'COVID-19 Testing',
-    //   description: 'COVID-19 testing swabs'
-    // },
-    // {
-    //   backgroundImage: 'url("./Assets/Home Page/Erectile Dysfunction.jpg")',
-    //   link: "/erectile-dysfunction",
-    //   title: 'Erectile Dysfunction',
-    //   description: 'You can feel comfortable discussing your ED questions and concerns with our pharmacist'
-    // },
     {
       backgroundImage: 'url("./Assets/Home Page/Health Screening.jpeg")',
       link: "/health-screenings",
       title: "Health Screenings",
-      description: "The pharmacist is conducting a health screening for the patient",
+      description:
+        "The pharmacist is conducting a health screening for the patient",
     },
     {
       backgroundImage: 'url("./Assets/Home Page/Immunization.jpeg")',
@@ -75,7 +64,8 @@ const MyCarousel = () => {
         'url("./Assets/Home Page/Medication Synchronization.jpeg")',
       link: "/medication-synchronization",
       title: "Medication Synchronization",
-      description: "Ensure you collect all your medications on a specific day each month",
+      description:
+        "Ensure you collect all your medications on a specific day each month",
     },
     {
       backgroundImage:
@@ -93,13 +83,6 @@ const MyCarousel = () => {
       description:
         "Our team is skilled in recognizing drug-induced nutrient depletion and offers counseling on medication to assist",
     },
-    // {
-    //   backgroundImage: 'url("./Assets/Home Page/Pet Care.jpeg")',
-    //   link: "/",
-    //   title: "Pet Care",
-    //   description:
-    //     "Prescriptions and medications specifically for your furry friend",
-    // },
     {
       backgroundImage: 'url("./Assets/Home Page/Free Delivery.jpeg")',
       link: "/home-delivery",

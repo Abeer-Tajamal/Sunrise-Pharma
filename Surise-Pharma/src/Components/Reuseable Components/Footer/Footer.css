@@ -1,14 +1,37 @@
 .footerContainer {
   display: flex;
-  background-color: #0d58a6;
-  color: white;
+  background-color: #dbf2f8;
+  color: #0d58a6;
   justify-content: space-around;
+  font-size: 20px;
 }
 
 ul > li {
   list-style-type: none;
 }
 
-.underlineText:hover {
-  text-decoration: underline;
+.underlineFooterText {
+  display: flex;
+  align-items: center;
+}
+
+.underlineFooterText:hover {
+  color: #7fc600;
+}
+
+.footer-headings {
+  border-bottom: 2px solid lightgreen;
+}
+
+.visiting-hours {
+  border: 2px solid lightblue;
+  text-align: right;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 980px) {
+  .footerContainer {
+    flex-wrap: wrap;
+  }
 }

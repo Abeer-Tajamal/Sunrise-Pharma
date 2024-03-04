@@ -18,7 +18,7 @@ function emailTemplate(
     </p>
     <p>
     the refill requested by your patients. If the problem persists please
-    call our office toll free at (877) 959-7550 or email help@rxwiki.com.
+    call our office toll free at (475) 209-9284 or email sunrisepharmrx@gmail.com.
     <strong> (Some Rx Numbers may be duplicated) </strong>
     </p>
     </div>

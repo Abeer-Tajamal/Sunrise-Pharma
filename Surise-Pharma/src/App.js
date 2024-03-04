@@ -12,8 +12,6 @@ import MedicationSynchronizationPage from "./Components/Pages/MedicationSynchron
 import MedicationAdherencePage from "./Components/Pages/MedicationAdherencePage";
 import LeaderProductsPage from "./Components/Pages/LeaderProductsPage";
 import DiabetesSpecializedCareCenterPage from "./Components/Pages/DiabetesSpecializedCareCenterPage";
-import TemsConditionPage from "./Components/Pages/TermsConditionsPage";
-import PrivacyPolicyPage from "./Components/Pages/PrivacyPolicyPage";
 import MyForm from "./Components/Reuseable Components/Form/Form";
 import CoronaVirusPage from "./Components/Pages/CoronaVirusPage";
 import TransferAPrescription from "./Components/Pages/TransferAPrescription";
@@ -32,21 +30,34 @@ const routesConfig = [
   { path: "/pharmacy", element: <ServicesPage /> },
   { path: "/account", element: <AccountPage /> },
   { path: "/home-delivery", element: <HomeDeliveryPage /> },
-  { path: "/medication-synchronization", element: <MedicationSynchronizationPage /> },
+  {
+    path: "/medication-synchronization",
+    element: <MedicationSynchronizationPage />,
+  },
   { path: "/medication-adherence", element: <MedicationAdherencePage /> },
   { path: "/leader-products", element: <LeaderProductsPage /> },
-  { path: "/diabetes-specialized-care-center", element: <DiabetesSpecializedCareCenterPage /> },
-  { path: "/terms-conditions", element: <TemsConditionPage /> },
-  { path: "/privacy-policy", element: <PrivacyPolicyPage /> },
+  {
+    path: "/diabetes-specialized-care-center",
+    element: <DiabetesSpecializedCareCenterPage />,
+  },
   { path: "/refill", element: <MyForm /> },
   { path: "/coronavirus", element: <CoronaVirusPage /> },
   { path: "/pharmacy-near-me-orange-ct", element: <TransferAPrescription /> },
   { path: "/immunizations", element: <ImmunizationsPage /> },
-  { path: "/durable-medical-equipment", element: <DurableMedicalEquipmentPage /> },
+  {
+    path: "/durable-medical-equipment",
+    element: <DurableMedicalEquipmentPage />,
+  },
   { path: "/med-pre-pours", element: <MedPrePoursPage /> },
   { path: "/health-screenings", element: <HealthScreeningsPage /> },
-  { path: "/medication-therapy-management", element: <MedicationTherapyManagementPage /> },
-  { path: "/nutrient-depletion-counseling", element: <NutrientDepletionCounselingPage /> },
+  {
+    path: "/medication-therapy-management",
+    element: <MedicationTherapyManagementPage />,
+  },
+  {
+    path: "/nutrient-depletion-counseling",
+    element: <NutrientDepletionCounselingPage />,
+  },
 ];
 
 function App() {

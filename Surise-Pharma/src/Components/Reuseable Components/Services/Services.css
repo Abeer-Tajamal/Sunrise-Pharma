@@ -12,6 +12,5 @@
 @media only screen and (max-width: 980px) {
   .inner-container-services {
     flex-wrap: wrap;
-    /* flex-direction: column; */
   }
 }

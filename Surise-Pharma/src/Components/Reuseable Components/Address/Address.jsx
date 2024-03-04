@@ -7,6 +7,9 @@ import "./Address.css";
 const Address = () => {
   return (
     <div className="container">
+      <div>
+        <strong>Welcome To Sunrise Pharmacy</strong>
+      </div>
       <div className="flexDisplay">
         <LocationOnIcon fontSize="small" />
         <Link
@@ -32,9 +35,8 @@ const Address = () => {
 
       <div className="flexDisplay">
         <AccessTimeIcon fontSize="small" />
-        <strong>
-          Mon-Fri: 9a.m.-6p.m. | Sat: 9a.m.-2p.m. | Sun: Closed
-        </strong>
+        &nbsp;
+        <strong>Mon-Fri: 9a.m.-6p.m. | Sat: 9a.m.-2p.m. | Sun: Closed</strong>
       </div>
     </div>
   );

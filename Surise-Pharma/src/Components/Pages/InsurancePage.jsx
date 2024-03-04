@@ -13,14 +13,14 @@ const InsurancePage = () => {
   const description =
     "We welcome the majority of major insurance plans, and among our key insurance partners are:";
   const arrayList = [
-    "Husky",
-    "Cigna",
-    "CVS Caremark",
     "Medicaid",
+    "Husky",
     "Aetna",
+    "Cigna",
     "AARP",
-    "Optum RX",
+    "CVS Caremark",
     "Express Scripts",
+    "Optum RX",
   ];
 
   return (

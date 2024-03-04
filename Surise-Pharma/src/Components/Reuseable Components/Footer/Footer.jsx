@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import FacebookIcon from "@mui/icons-material/Facebook";
+import PhoneIcon from "@mui/icons-material/Phone";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import EmailIcon from "@mui/icons-material/Email";
 import "./Footer.css";
-import ColorButtons from "../Button/button";
 
 const Footer = () => {
   return (
@@ -10,153 +11,179 @@ const Footer = () => {
         <div>
           <ul>
             <li>
-              <strong>Quick Links</strong>
-            </li>
-            <li className="underlineText">
-              <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-                Home
-              </Link>
-            </li>
-            <li className="underlineText">
-              <Link
-                to="/about-us"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                About
-              </Link>
-            </li>
-            <li className="underlineText">
-              <Link
-                to="/pharmacy"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Service
-              </Link>
-            </li>
-            <li className="underlineText">
-              <Link
-                to="/contact"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Contact
-              </Link>
-            </li>
-            <li className="underlineText">
-              <Link
-                to="/refill"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Refill
-              </Link>
-            </li>
-            <li className="underlineText">
-              <Link
-                to="/pharmacy-near-me-orange-ct"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Transfer
-              </Link>
+              <strong className="footer-headings">Contact Us</strong>
             </li>
           </ul>
-        </div>
-        <div>
           <ul>
-            <li>
-              <strong>Contact Us</strong>
-            </li>
-            <li>
-              <Link
-                to="https://www.facebook.com/people/Sunrise-Pharmacy/100066406663162/"
-                target="_blank"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                <FacebookIcon />
-              </Link>
-            </li>
-            <li>
-              Phone:
+            <li className="underlineFooterText">
+              <PhoneIcon fontSize="small" />
+              &nbsp; Phone:
               <Link
                 to="tel:475-209-9284"
-                style={{ textDecoration: "none", color: "white" }}
+                style={{ textDecoration: "none", color: "#0d58a6" }}
               >
-                <span className="underlineText">475-209-9284</span>
+                <span className="underlineFooterText">475-209-9284</span>
               </Link>
             </li>
-            <li>Fax: 475-209-9284</li>
-            <li className="underlineText">
+            <li className="underlineFooterText">
+              <LocationOnIcon fontSize="small" />
+              &nbsp;
+              <Link
+                to="https://goo.gl/maps/gRCqUduCEt3FBXvn6"
+                target="_blank"
+                style={{ textDecoration: "none", color: "#0d58a6" }}
+              >
+                <span className="underlineFooterText">
+                  240 Indian River Rd Orange, CT 0647
+                </span>
+              </Link>
+            </li>
+            <li className="underlineFooterText">
+              <EmailIcon fontSize="small" />
+              &nbsp;
               <Link
                 to="mailto:sunrisepharmrx@gmail.com"
-                style={{ textDecoration: "none", color: "white" }}
+                style={{ textDecoration: "none", color: "#0d58a6" }}
               >
-                sunrisepharmrx@gmail.com
+                <span className="underlineFooterText">
+                  sunrisepharmrx@gmail.com
+                </span>
               </Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li>
-              <strong>Services</strong>
-            </li>
-            <li className="underlineText">
-              <Link
-                to="/med-pre-pours"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Med Pre-Pours
-              </Link>
-            </li>
-            <li className="underlineText">
-              <Link
-                to="/immunizations"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Immunization
-              </Link>
-            </li>
-            <li className="underlineText">
-              <Link
-                to="/medication-adherence"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Medication Adherence
-              </Link>
-            </li>
-            <li className="underlineText">
-              <Link
-                to="/medication-synchronization"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Medication Synchronization
-              </Link>
-            </li>
-            <li className="underlineText">
-              <Link
-                to="/medication-therapy-management"
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Medication Management
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li>
-              <strong>Leave Us A Review</strong>
-            </li>
-            <li>
-              Let us know how you enjoyed your pharmacy experience here at
-              Sunrise Pharmacy.
             </li>
             <br />
-            <li>
-              <ColorButtons
-                buttonTarget="_blank"
-                buttonLink="http://search.google.com/local/writereview?placeid=ChIJdenmwm116IkRQ_JDQmbs_4U"
-                label="Submit a Review"
-              />
+            <li className="logo">
+              <Link to="/">
+                <img
+                  className="logo-image"
+                  src="./Assets/Home Page/Sunrise Pharmacy Logo.png"
+                  alt="Sunrise Pharmacy"
+                />
+              </Link>
             </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <strong className="footer-headings">Quick Links</strong>
+            </li>
+          </ul>
+          <ul>
+            <li className="underlineFooterText">
+              <Link to="/" style={{ textDecoration: "none", color: "#0d58a6" }}>
+                <span className="underlineFooterText">Home</span>
+              </Link>
+            </li>
+            <li className="underlineFooterText">
+              <Link
+                to="/about-us"
+                style={{ textDecoration: "none", color: "#0d58a6" }}
+              >
+                <span className="underlineFooterText">About</span>
+              </Link>
+            </li>
+            {/* <li className="underlineFooterText">
+              <Link
+                to="/pharmacy"
+                style={{ textDecoration: "none", color: "#0d58a6" }}
+              >
+                <span className="underlineFooterText">Service</span>
+              </Link>
+            </li>
+            <li className="underlineFooterText">
+              <Link
+                to="/contact"
+                style={{ textDecoration: "none", color: "#0d58a6" }}
+              >
+                <span className="underlineFooterText">Contact</span>
+              </Link>
+            </li> */}
+            <li className="underlineFooterText">
+              <Link
+                to="/refill"
+                style={{ textDecoration: "none", color: "#0d58a6" }}
+              >
+                <span className="underlineFooterText">Refill</span>
+              </Link>
+            </li>
+            <li className="underlineFooterText">
+              <Link
+                to="/pharmacy-near-me-orange-ct"
+                style={{ textDecoration: "none", color: "#0d58a6" }}
+              >
+                <span className="underlineFooterText">Transfer</span>
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <strong className="footer-headings">Services</strong>
+            </li>
+          </ul>
+          <ul>
+            <li className="underlineFooterText">
+              <Link
+                to="/med-pre-pours"
+                style={{ textDecoration: "none", color: "#0d58a6" }}
+              >
+                <span className="underlineFooterText">Med Pre-Pours</span>
+              </Link>
+            </li>
+            <li className="underlineFooterText">
+              <Link
+                to="/immunizations"
+                style={{ textDecoration: "none", color: "#0d58a6" }}
+              >
+                <span className="underlineFooterText">Immunization</span>
+              </Link>
+            </li>
+            <li className="underlineFooterText">
+              <Link
+                to="/medication-adherence"
+                style={{ textDecoration: "none", color: "#0d58a6" }}
+              >
+                <span className="underlineFooterText">
+                  Medication Adherence
+                </span>
+              </Link>
+            </li>
+            <li className="underlineFooterText">
+              <Link
+                to="/medication-synchronization"
+                style={{ textDecoration: "none", color: "#0d58a6" }}
+              >
+                <span className="underlineFooterText">
+                  Medication Synchronization
+                </span>
+              </Link>
+            </li>
+            <li className="underlineFooterText">
+              <Link
+                to="/medication-therapy-management"
+                style={{ textDecoration: "none", color: "#0d58a6" }}
+              >
+                <span className="underlineFooterText">
+                  Medication Management
+                </span>
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <strong className="footer-headings">Visiting Hours</strong>
+            </li>
+          </ul>
+          <ul className="visiting-hours">
+            <li>Mon ------------- 09:00 - 06:00</li>
+            <li>Tue ------------- 09:00 - 06:00</li>
+            <li>Wed ------------- 09:00 - 06:00</li>
+            <li>Thu ------------- 09:00 - 06:00</li>
+            <li>Fri ------------- 09:00 - 06:00</li>
+            <li>Sat ------------- 09:00 - 02:00</li>
           </ul>
         </div>
       </div>
@@ -165,7 +192,7 @@ const Footer = () => {
           backgroundColor: "#0d58a6",
           color: "white",
           textAlign: "center",
-          paddingBottom: "20px",
+          padding: "20px",
         }}
       >
         Copyrights 2024. All rights are reserved by Sunrise Pharmacy.

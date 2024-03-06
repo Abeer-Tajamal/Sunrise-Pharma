@@ -54,7 +54,7 @@ const Navbar = () => {
                   color: location.pathname === "/" ? "#7FC602" : "#0d58a6",
                 }}
               >
-                Home
+                Home |
               </button>
             </Link>
           </div>
@@ -70,7 +70,7 @@ const Navbar = () => {
                     location.pathname === "/about-us" ? "#7FC602" : "#0d58a6",
                 }}
               >
-                About Us
+                About Us |
               </button>
             </Link>
           </div>
@@ -82,9 +82,8 @@ const Navbar = () => {
                   location.pathname === "/services" ? "#7FC602" : "#0d58a6",
               }}
             >
-              Services
+              Services |
             </button>
-
             {isOpen && (
               <ul className="dropdown-menu">
                 <Link
@@ -246,7 +245,7 @@ const Navbar = () => {
                       : "#0d58a6",
                 }}
               >
-                Free Delivery
+                Free Delivery |
               </button>
             </Link>
           </div>
@@ -262,7 +261,7 @@ const Navbar = () => {
                     location.pathname === "/insurance" ? "#7FC602" : "#0d58a6",
                 }}
               >
-                Insurance
+                Insurance |
               </button>
             </Link>
           </div>

@@ -178,12 +178,12 @@ const Footer = () => {
             </li>
           </ul>
           <ul className="visiting-hours">
-            <li>Mon ------------- 09:00 - 06:00</li>
-            <li>Tue ------------- 09:00 - 06:00</li>
-            <li>Wed ------------- 09:00 - 06:00</li>
-            <li>Thu ------------- 09:00 - 06:00</li>
-            <li>Fri ------------- 09:00 - 06:00</li>
-            <li>Sat ------------- 09:00 - 02:00</li>
+            <li>Mon &nbsp; ------------- &nbsp; 09:00 - 06:00</li>
+            <li>Tue &nbsp;&nbsp; ------------- &nbsp; 09:00 - 06:00</li>
+            <li>Wed &nbsp; ------------- &nbsp; 09:00 - 06:00</li>
+            <li>Thu &nbsp;&nbsp; ------------- &nbsp; 09:00 - 06:00</li>
+            <li>Fri &nbsp;&nbsp; &nbsp; ------------- &nbsp; 09:00 - 06:00</li>
+            <li>Sat &nbsp;&nbsp;&nbsp; ------------- &nbsp; 09:00 - 02:00</li>
           </ul>
         </div>
       </div>

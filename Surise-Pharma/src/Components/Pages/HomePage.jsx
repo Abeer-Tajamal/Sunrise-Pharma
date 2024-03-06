@@ -27,11 +27,11 @@ const HomePage = () => {
       <br />
       <PharmacyInsider />
       <CareBeyondDrugs />
-      <TestimonialHeader heading="Read Our Patient Reviews" />
-      <Testimonals />
-      <br />
       <br />
       <Services />
+      <br />
+      <TestimonialHeader heading="Satisfied Patients Reviews" />
+      <Testimonals />
       <br />
       <HearFromYou />
       <Footer />

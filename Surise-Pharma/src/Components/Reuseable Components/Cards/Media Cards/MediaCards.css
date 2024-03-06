@@ -1,14 +1,4 @@
-.css-1ri6ub7-MuiPaper-root-MuiCard-root {
-  box-shadow: none !important;
-}
-
-.css-1ri6ub7-MuiPaper-root-MuiCard-root:hover {
-  background-color: lightblue !important;
-  transition: ease-in-out;
-}
-
 .card-img {
-  /* background-color: #7fc602; */
   object-fit: contain !important;
   cursor: pointer;
 }

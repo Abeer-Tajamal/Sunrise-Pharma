@@ -41,17 +41,18 @@ const Coronavirus = () => {
     <div className="bordered-div">
       <div>
         <Typography variant="h5" gutterBottom>
-          Join our COVID-19 Vaccination Waitlist
+          Join our Vaccination Waitlist
         </Typography>
-        <div className="patient-div">
+        <div className="patient-div-vaccine">
           <PersonIcon color="action" />
+          &nbsp;
           <Typography gutterBottom variant="h6">
             Patient Details
           </Typography>
         </div>
         <Typography>Please tell us about yourself</Typography>
       </div>
-      <div className="form-div">
+      <div className="form-div-vaccine">
         <TextField
           variant="outlined"
           label="First Name"
@@ -61,7 +62,7 @@ const Coronavirus = () => {
           }}
         />
       </div>
-      <div className="form-div">
+      <div className="form-div-vaccine">
         <TextField
           variant="outlined"
           label="Last Name"
@@ -71,7 +72,7 @@ const Coronavirus = () => {
           }}
         />
       </div>
-      <div className="form-div">
+      <div className="form-div-vaccine">
         <TextField
           variant="outlined"
           label="Email"
@@ -82,7 +83,7 @@ const Coronavirus = () => {
           }}
         />
       </div>
-      <div className="form-div">
+      <div className="form-div-vaccine">
         <TextField
           variant="outlined"
           label="Phone"
@@ -95,19 +96,22 @@ const Coronavirus = () => {
           notifications.
         </Typography>
       </div>
-      <div className="form-div">
-        <InputLabel htmlFor="date-input">Date of Birth</InputLabel>
-        <TextField
-          variant="outlined"
-          type="Date"
-          fullWidth
-          InputLabelProps={{
-            shrink: true,
-          }}
-        />
+      <div className="form-div-vaccine">
+        <FormControl sx={{ m: 1, minWidth: 500 }}>
+          <InputLabel id="vaccine-input">Offer Vaccine</InputLabel>
+          <Select>
+            <MenuItem value="flu">Flu (Influenza)</MenuItem>
+            <MenuItem value="Shingles">Shingles</MenuItem>
+            <MenuItem value="Pneumonia">Pneumonia</MenuItem>
+            <MenuItem value="HPV">HPV (human papilloma virus)</MenuItem>
+            <MenuItem value="Hepatitis">Hepatitis</MenuItem>
+            <MenuItem value="TDAP">TDAP</MenuItem>
+          </Select>
+        </FormControl>
       </div>
-      <div className="patient-div">
+      <div className="patient-div-vaccine">
         <HomeIcon color="action" />
+        &nbsp;
         <Typography gutterBottom variant="h6">
           Pharmacy Location
         </Typography>
@@ -128,29 +132,8 @@ const Coronavirus = () => {
             <MenuItem value="">
               <em>None</em>
             </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
           </Select>
         </FormControl>
-      </div>
-      <div className="patient-div">
-        <Checkbox defaultChecked />
-        <Typography>Sign up for the pharmacy newsletter</Typography>
-      </div>
-      <div className="patient-div">
-        <Checkbox />
-        <Typography>
-          I accept the
-          <Link className="link-color" to="/terms-conditions">
-            Terms and Conditions
-          </Link>
-          ,&nbsp;
-          <Link className="link-color" to="/privacy-policy">
-            Privacy Policy&nbsp;
-          </Link>
-          and <Link className="link-color">Messaging Consent</Link>
-        </Typography>
       </div>
       <br />
       <Button variant="contained" onClick={handleClick}>

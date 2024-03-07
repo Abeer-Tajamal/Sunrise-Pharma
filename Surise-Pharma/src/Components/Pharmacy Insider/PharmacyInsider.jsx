@@ -10,11 +10,12 @@ const PharmacyInsider = () => {
           <br />
           <h2>Join the Pharmacy Insider community.</h2>
           <p>
-            Join our newsletter to receive promotions, health updates, and exclusive savings.
+            Join our newsletter to receive promotions, health updates, and
+            exclusive savings.
           </p>
           <br />
           <input type="text" id="email" placeholder="Email address" />
-          <ColorButtons buttonLink="" label="Subscribe Here" />
+          <ColorButtons buttonLink="/vaccines" label="Vaccines" />
         </div>
       </div>
     </>

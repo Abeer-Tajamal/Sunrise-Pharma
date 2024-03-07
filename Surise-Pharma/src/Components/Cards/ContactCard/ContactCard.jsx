@@ -3,8 +3,8 @@ import "./ContactCard.css";
 
 const ContactCard = () => {
   return (
-    <div className="outer-container">
-      <div className="inner-container">
+    <div className="outer-container-contact">
+      <div className="inner-container-contact">
         <ReuseableCards
           title="Our Location"
           p1="240 Indian River Rd"
@@ -12,7 +12,7 @@ const ContactCard = () => {
           p3="06477"
         />
       </div>
-      <div className="inner-container">
+      <div className="inner-container-contact">
         <ReuseableCards
           title="Contact Us"
           p1="Phone: "
@@ -21,7 +21,7 @@ const ContactCard = () => {
           LinkText2="sunrisepharmrx@gmail.com"
         />
       </div>
-      <div className="inner-container">
+      <div className="inner-container-contact">
         <ReuseableCards
           title="We're Open"
           p1="Mon - Fri: 9a.m.-6p.m."

@@ -6,12 +6,11 @@
   padding: 40px;
 }
 
-.patient-div {
+.patient-div-vaccine {
   display: flex;
-  align-items: center;
 }
 
-.form-div {
+.form-div-vaccine {
   margin-bottom: 20px;
   width: 300px;
 }

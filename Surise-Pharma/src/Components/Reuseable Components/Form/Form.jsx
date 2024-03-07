@@ -157,6 +157,7 @@ function Step3({ onNext }) {
   const [open, setOpen] = useState(false);
   const [medicineNumber, setMedicineNumber] = useState("");
   const [medicineName, setMedicineName] = useState("");
+  const [patientNotes, setPatientNotes] = useState("");
 
   const handleChange = (index, event) => {
     const { name, value } = event.target;
@@ -175,10 +176,11 @@ function Step3({ onNext }) {
     else {
       setMedicines([
         ...medicines,
-        { number: medicineNumber, name: medicineName },
+        { number: medicineNumber, name: medicineName, notes: patientNotes },
       ]);
       setMedicineNumber("");
       setMedicineName("");
+      setPatientNotes("");
       setOpen(false);
     }
   };
@@ -208,6 +210,15 @@ function Step3({ onNext }) {
             <input
               type="text"
               value={medicine.name}
+              onChange={(e) => handleChange(index, e)}
+            />
+            &nbsp;
+          </div>
+          <div className="display-medicine">
+            <label>Patient Notes:</label>&nbsp;
+            <input
+              type="text"
+              value={medicine.notes}
               onChange={(e) => handleChange(index, e)}
             />
           </div>
@@ -252,6 +263,16 @@ function Step3({ onNext }) {
               type="text"
               value={medicineName}
               onChange={(event) => setMedicineName(event.target.value)}
+            />
+          </label>
+          &nbsp;
+          <label>
+            Patient Notes: &nbsp;
+            <input
+              placeholder="OPTIONAL"
+              type="text"
+              value={patientNotes}
+              onChange={(event) => setPatientNotes(event.target.value)}
             />
           </label>
           &nbsp;

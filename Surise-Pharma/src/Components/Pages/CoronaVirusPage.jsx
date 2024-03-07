@@ -6,7 +6,7 @@ import Navbar from "../Reuseable Components/NavBar/NavBar";
 
 const CoronaVirusPage = () => {
   useDynamicPageTitle(
-    "Coronavirus Updates & Information - Sunrise Pharmacy - Your Local Orange Pharmacy"
+    "Vaccine Updates & Information - Sunrise Pharmacy - Your Local Orange Pharmacy"
   );
 
   return (

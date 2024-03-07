@@ -72,6 +72,10 @@ function emailTemplate(
       <tr>
       <td style="border: 2px solid black">Medication</td>
       <td style="border: 2px solid black">${item.name}</td>
+      </tr>
+      <tr>
+      <td style="border: 2px solid black">Patient Notes</td>
+      <td style="border: 2px solid black">${item.notes}</td>
       </tr>`;
     })}
     </table>
@@ -90,23 +94,6 @@ function emailTemplate(
       <td style="border: 2px solid black">${address}</td>
       </tr>
       </table>
-      <table>
-      <tr>
-      <th style="border-bottom: 2px solid black; text-align: left">
-      PATIENT NOTES
-      </th>
-      </tr>
-      <tr>
-      <td>
-      can you refill the methotrexate too please? I can't find the Rx
-      </td>
-      </tr>
-      <tr>
-      <td>
-      number. Please deliver all 4 of these at the same time. Thanks.
-      </td>
-    </tr>
-  </table>
   </div>
   <p>
   This HIPAA complaint email contains important medication refill

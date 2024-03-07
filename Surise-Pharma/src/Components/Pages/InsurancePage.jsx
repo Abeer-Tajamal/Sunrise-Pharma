@@ -27,7 +27,7 @@ const InsurancePage = () => {
     <>
       <Address />
       <Navbar />
-      <div className="container-media">
+      <div className="container-media-insurance">
         <MediaRight
           image={image}
           title={title}

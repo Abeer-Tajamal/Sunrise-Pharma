@@ -1,4 +1,4 @@
-.container-media {
+.container-media-insurance {
   margin: 20px 50px;
 }
 
@@ -6,26 +6,4 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.privacy-content {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 500px;
-}
-
-.terms-content {
-  font-size: 18px;
-  display: flex;
-  flex-direction: column;
-  margin: 50px 100px;
-}
-
-.revised-date {
-  display: flex;
-  justify-content: center;
-}
-
-.privacy-link {
-  color: #df4851;
 }

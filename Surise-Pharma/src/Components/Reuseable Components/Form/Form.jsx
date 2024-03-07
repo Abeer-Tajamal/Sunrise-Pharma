@@ -3,6 +3,7 @@ import InputIcon from "@mui/icons-material/Input";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Modal from "@mui/material/Modal";
+import Swal from "sweetalert2";
 import "./Form.css";
 
 function Step1({ onNext }) {
@@ -172,7 +173,11 @@ function Step3({ onNext }) {
 
   const handleModalSubmit = () => {
     if (medicineNumber > 99999 || medicineNumber < 40000)
-      alert("Rx Number must be between 39999 and 99999");
+      Swal.fire({
+        title: "Warning",
+        text: "Rx Number must be between 39999 and 99999",
+        icon: "warning",
+      });
     else {
       setMedicines([
         ...medicines,
@@ -296,6 +301,9 @@ function Stepper() {
   };
 
   const handleReset = () => {
+    if (step === 1) {
+      history("/");
+    }
     setStep((prevStep) => prevStep - 1);
   };
 
@@ -305,11 +313,16 @@ function Stepper() {
       .then((res) => {
         if (res.data.success) {
           history("/");
-        } else alert("Error occured");
+        } else
+          Swal.fireal.fire({
+            title: "Error",
+            text: "Error occured while sending email",
+            icon: "error",
+          });
       })
       .catch((error) => {
         console.error("Error sending mail:", error);
-        alert("Error occurred");
+        alert("Error sending mail");
       });
     console.log({ ...formData, ...data });
   };
@@ -321,7 +334,7 @@ function Stepper() {
       {step === 3 && <Step3 onNext={(data) => sendMail(data)} />}
       {step < 3 && (
         <button onClick={handleReset} className="back-btn">
-          back
+          Back
         </button>
       )}
     </div>

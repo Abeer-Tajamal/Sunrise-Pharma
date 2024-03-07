@@ -1,6 +1,6 @@
-.bordered-div {
+.bordered-div-vaccine {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
-  margin: 50px 150px;
+  margin: 50px 410px;
   border-radius: 4px;
   border: 1px solid lightgray;
   padding: 40px;
@@ -22,4 +22,8 @@
 
 .link-color:hover {
   text-decoration: underline;
+}
+
+.vaccine-form-inputs {
+  display: flex;
 }

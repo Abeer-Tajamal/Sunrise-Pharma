@@ -1,4 +1,4 @@
-import Coronavirus from "../CoronaVirusForm/CoronaVirusForm";
+import Coronavirus from "../CoronaVirusForm/VaccinesForm";
 import Address from "../Reuseable Components/Address/Address";
 import useDynamicPageTitle from "../Reuseable Components/DynamicPageTitle/DynamicPageTitle";
 import Footer from "../Reuseable Components/Footer/Footer";

@@ -17,7 +17,7 @@ const Footer = () => {
           <ul>
             <li className="underlineFooterText">
               <PhoneIcon fontSize="small" />
-              &nbsp; Phone:
+              &nbsp; Phone: &nbsp;
               <Link
                 to="tel:475-209-9284"
                 style={{ textDecoration: "none", color: "#0d58a6" }}

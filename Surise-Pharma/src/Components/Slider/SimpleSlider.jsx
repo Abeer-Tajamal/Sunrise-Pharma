@@ -108,7 +108,7 @@ const MyCarousel = () => {
             style={style}
           >
             <a href={style.link}>
-              <div className="overlay title">
+              <div className="overlay-slider title-slider">
                 <h2>{style.title}</h2>
                 <p>{style.description}</p>
               </div>

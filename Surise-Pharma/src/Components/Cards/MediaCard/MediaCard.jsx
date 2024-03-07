@@ -10,7 +10,7 @@ const MediaCard = () => {
   };
 
   const cardContent2 = {
-    image: "./Assets/Home Page/Prescription Filling.png",
+    image: "./Assets/Home Page/health-insurance-abstract.jpg",
     title: "Easy Prescription",
     description:
       "We process both new and existing prescriptions conveniently, whether it's in-store, over the phone, or online, ensuring we cater to your needs effectively.",

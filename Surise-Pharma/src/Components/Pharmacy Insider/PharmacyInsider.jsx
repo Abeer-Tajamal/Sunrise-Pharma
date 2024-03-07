@@ -8,13 +8,11 @@ const PharmacyInsider = () => {
         <div>
           <br />
           <br />
-          <h2>Join the Pharmacy Insider community.</h2>
+          <h2>Schedule your vaccination appointment</h2>
           <p>
-            Join our newsletter to receive promotions, health updates, and
-            exclusive savings.
+            Our devoted team of medical experts is dedicated to providing secure and efficient vaccinations in a convenient and pleasant setting.
           </p>
           <br />
-          <input type="text" id="email" placeholder="Email address" />
           <ColorButtons buttonLink="/vaccines" label="Vaccines" />
         </div>
       </div>

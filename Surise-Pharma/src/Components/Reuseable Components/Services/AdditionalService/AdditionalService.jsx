@@ -1,8 +1,9 @@
 import MediaLeft from "../../Cards/MediaLeft/MediaLeft";
+import "../Services.css"
 
 const AdditionalService = () => {
   return (
-    <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+    <div className="additional-service-container">
       <MediaLeft
         imgSrc="./Assets/Services/Additional Services/medication service.png"
         title="Medication Services"

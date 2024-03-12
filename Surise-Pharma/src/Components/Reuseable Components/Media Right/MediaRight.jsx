@@ -1,4 +1,3 @@
-import React from "react";
 import "./MediaRight.css";
 
 const ImageDetails = ({

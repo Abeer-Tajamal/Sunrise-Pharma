@@ -3,13 +3,10 @@ import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { Button } from "@mui/material";
 import "./TopMedia.css";
-import { useNavigate } from "react-router-dom";
+import ColorButtons from "../Reuseable Components/Button/button";
 
 export default function RecipeReviewCard() {
-  const history = useNavigate();
-
   return (
     <div className="top-media">
       <Card className="card">
@@ -26,13 +23,7 @@ export default function RecipeReviewCard() {
             optimized Patient Portal
           </Typography>
         </CardContent>
-        <Button
-          variant="contained"
-          color="success"
-          onClick={(e) => history("/refill")}
-        >
-          Get Started
-        </Button>
+        <ColorButtons buttonLink={"/refill"} label={"Get Started"} />
       </Card>
     </div>
   );

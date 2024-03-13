@@ -5,6 +5,14 @@ import { useNavigate } from "react-router-dom";
 import Modal from "@mui/material/Modal";
 import Swal from "sweetalert2";
 import "./Form.css";
+import {
+  Button,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+} from "@mui/material";
 
 function Step1({ onNext }) {
   const [firstName, setFirstName] = useState("");
@@ -13,10 +21,26 @@ function Step1({ onNext }) {
   const [phone, setPhone] = useState("");
   const [dateofbirth, setDateOfBirth] = useState("");
 
+  const history = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Here you can perform any validation before moving to the next step
-    onNext({ firstName, lastName, email, phone, dateofbirth });
+    if (
+      firstName === "" ||
+      lastName === "" ||
+      email === "" ||
+      phone === "" ||
+      dateofbirth === ""
+    ) {
+      Swal.fire({
+        title: "Warning",
+        text: "All fields with * are required",
+        icon: "warning",
+      });
+    } else {
+      onNext({ firstName, lastName, email, phone, dateofbirth });
+    }
   };
 
   const formatMobileNumber = (input) => {
@@ -35,119 +59,166 @@ function Step1({ onNext }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="form-outer-div">
+    <form className="form-outer-div">
       <div className="title-div">
         <InputIcon className="title-icon" />
         <h2>Enter Profile Info</h2>
       </div>
       <div className="two-inputs">
         <div className="label-input">
-          <label>First Name</label>
-          <input
-            type="text"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
+          <TextField
             required
+            variant="outlined"
+            label="First Name"
+            value={firstName}
+            fullWidth
+            onChange={(e) => {
+              setFirstName(e.target.value);
+            }}
           />
         </div>
         <div className="label-input">
-          <label>Last Name</label>
-          <input
-            type="text"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
+          <TextField
             required
+            variant="outlined"
+            label="Last Name"
+            value={lastName}
+            fullWidth
+            onChange={(e) => {
+              setLastName(e.target.value);
+            }}
           />
         </div>
       </div>
       <div className="two-inputs">
         <div className="label-input">
-          <label>Cell Phone</label>
-          <input
-            type="tel"
-            value={phone}
-            onChange={(e) => setPhone(formatMobileNumber(e.target.value))}
+          <TextField
             required
+            type="tel"
+            variant="outlined"
+            label="Cell Phone"
+            value={phone}
+            fullWidth
+            onChange={(e) => {
+              setPhone(formatMobileNumber(e.target.value));
+            }}
           />
         </div>
         <div className="label-input">
-          <label>Date of Birth</label>
-          <input
-            type="date"
-            name={dateofbirth}
-            value={dateofbirth}
-            onChange={(e) => setDateOfBirth(e.target.value)}
+          <TextField
             required
+            type="email"
+            variant="outlined"
+            label="Email Address"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
           />
         </div>
       </div>
       <div className="last-input">
-        <label>Email Address</label>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+        <InputLabel htmlFor="date">Date of Birth *</InputLabel>
+        <TextField
           required
+          fullWidth
+          type="date"
+          variant="outlined"
+          id="date"
+          value={dateofbirth}
+          onChange={(e) => {
+            setDateOfBirth(e.target.value);
+          }}
         />
       </div>
       <div className="btn-div">
-        <button type="submit" className="next-btn">
+        <Button variant="contained" onClick={() => history("/")}>
+          Back
+        </Button>
+        &nbsp;
+        <Button variant="contained" onClick={handleSubmit}>
           NEXT
-        </button>
+        </Button>
       </div>
     </form>
   );
 }
 
-function Step2({ onNext }) {
+function Step2({ onNext, onPrevious }) {
   const [deliverType, setDeliverType] = useState("");
   const [address, setAddress] = useState("");
 
+  const handleBack = (e) => {
+    onPrevious();
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    onNext({ deliverType, address });
+    if (deliverType === "PickUp") {
+      onNext({ deliverType, address });
+    } else if (deliverType === "" || address === "") {
+      Swal.fire({
+        title: "Warning",
+        text: "All fields with * are required",
+        icon: "warning",
+      });
+    } else {
+      onNext({ deliverType, address });
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="form-outer-div">
+    <form className="form-outer-div">
       <div className="title-div">
         <InputIcon className="title-icon" />
         <h2>Select Your Pharmacy</h2>
       </div>
       <div className="label-input">
-        <label className="form-label">Pharmacy Location</label>
-        <select className="menu-option">
-          <option>Sunrise Pharmacy</option>
-        </select>
+        <FormControl sx={{ minWidth: 615 }}>
+          <InputLabel className="form-label">Pharmacy Location </InputLabel>
+          <Select className="menu-option" label="Pharmacy Location">
+            <MenuItem value="SunrisePharmacy">Sunrise Pharmacy</MenuItem>
+          </Select>
+        </FormControl>
       </div>
       <div className="label-input">
-        <label className="form-label">Pickup Method</label>
-        <select
-          className="menu-option"
-          value={deliverType}
-          onChange={(e) => setDeliverType(e.target.value)}
-          required
-        >
-          <option value="">--Please select--</option>
-          <option value="PickUp">Pick Up</option>
-          <option value="Delivery">Delivery</option>
-        </select>
+        <FormControl sx={{ minWidth: 615 }}>
+          <InputLabel className="form-label">Pickup Method *</InputLabel>
+          <Select
+            label="Pickup Method"
+            className="menu-option"
+            value={deliverType}
+            onChange={(e) => setDeliverType(e.target.value)}
+            required
+          >
+            <MenuItem value="">--Please select--</MenuItem>
+            <MenuItem value="PickUp">Pick Up</MenuItem>
+            <MenuItem value="Delivery">Delivery</MenuItem>
+          </Select>
+        </FormControl>
       </div>
       {deliverType === "Delivery" && (
         <div className="last-input">
-          <label>Address</label>
-          <input
-            type="text"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
+          <TextField
             required
+            label="Address"
+            fullWidth
+            variant="outlined"
+            value={address}
+            onChange={(e) => {
+              setAddress(e.target.value);
+            }}
           />
         </div>
       )}
       <div className="btn-div">
-        <button type="submit" className="next-btn">
+        <Button variant="contained" onClick={handleBack}>
+          Back
+        </Button>
+        &nbsp;
+        <Button variant="contained" onClick={handleSubmit}>
           Next
-        </button>
+        </Button>
       </div>
     </form>
   );
@@ -159,13 +230,6 @@ function Step3({ onNext }) {
   const [medicineNumber, setMedicineNumber] = useState("");
   const [medicineName, setMedicineName] = useState("");
   const [patientNotes, setPatientNotes] = useState("");
-
-  const handleChange = (index, event) => {
-    const { name, value } = event.target;
-    const updatedMedicines = [...medicines];
-    updatedMedicines[index][name] = value;
-    setMedicines(updatedMedicines);
-  };
 
   const handleAddMedicine = () => {
     setOpen(true);
@@ -196,94 +260,100 @@ function Step3({ onNext }) {
   };
 
   return (
-    <form className="form-outer-div" onSubmit={handleSubmit}>
+    <form className="form-outer-div">
       <div className="title-div">
         <InputIcon className="title-icon" />
         <h2>Medications List</h2>
       </div>
       {medicines.map((medicine, index) => (
         <div key={index} style={{ width: "100%" }}>
-          <div className="display-medicine">
-            <label>Rx Number:</label>&nbsp;
-            <input
-              type="text"
-              value={medicine.number}
-              onChange={(e) => handleChange(index, e)}
-            />
-            &nbsp;
-            <label>Rx Name:</label>&nbsp;
-            <input
-              type="text"
-              value={medicine.name}
-              onChange={(e) => handleChange(index, e)}
-            />
-            &nbsp;
-          </div>
-          <div className="display-medicine">
-            <label>Patient Notes:</label>&nbsp;
-            <input
-              type="text"
-              value={medicine.notes}
-              onChange={(e) => handleChange(index, e)}
-            />
+          <div className="two-inputs">
+            <div className="label-input">
+              <TextField
+                type="number"
+                label="Rx Number"
+                variant="outlined"
+                value={medicine.number}
+              />
+            </div>
+            <div className="label-input">
+              <TextField
+                label="Rx Name"
+                variant="outlined"
+                value={medicine.name}
+              />
+            </div>
+            <div className="label-input">
+              <TextField
+                label="Patient Notes"
+                variant="outlined"
+                value={medicine.notes}
+              />
+            </div>
           </div>
         </div>
       ))}
+      <br />
       <div style={{ display: "flex", justifyContent: "space-evenly" }}>
         <div>
-          <button
-            className="next-btn"
-            type="button"
-            onClick={handleAddMedicine}
-          >
+          <Button variant="contained" onClick={handleAddMedicine}>
             Add Medicine
-          </button>
+          </Button>
         </div>
         &nbsp;
         <div>
-          <button className="next-btn" type="submit">
+          <Button variant="contained" onClick={handleSubmit}>
             Submit
-          </button>
+          </Button>
         </div>
       </div>
 
       <Modal open={open} onClose={() => setOpen(false)}>
         <div className="modal-content">
           <h2>Add Medicine</h2>
-          <label>
-            RX Number:&nbsp;
-            <input
-              type="number"
-              value={medicineNumber}
-              onChange={(event) => setMedicineNumber(event.target.value)}
-              required
-              min="40000"
-              max="99999"
-            />
-            &nbsp;
-          </label>
-          <label>
-            RX Name: &nbsp;
-            <input
-              type="text"
-              value={medicineName}
-              onChange={(event) => setMedicineName(event.target.value)}
-            />
-          </label>
-          &nbsp;
-          <label>
-            Patient Notes: &nbsp;
-            <input
-              placeholder="OPTIONAL"
-              type="text"
-              value={patientNotes}
-              onChange={(event) => setPatientNotes(event.target.value)}
-            />
-          </label>
-          &nbsp;
-          <button className="next-btn" onClick={handleModalSubmit}>
+          <div className="two-inputs">
+            <div className="label-input">
+              <TextField
+                required
+                fullWidth
+                type="number"
+                label="RX Number"
+                variant="outlined"
+                value={medicineNumber}
+                onChange={(e) => {
+                  setMedicineNumber(e.target.value);
+                }}
+              />
+            </div>
+            <div className="label-input">
+              <TextField
+                required
+                label="RX Name"
+                fullWidth
+                variant="outlined"
+                value={medicineName}
+                onChange={(e) => {
+                  setMedicineName(e.target.value);
+                }}
+              />
+            </div>
+            <div className="label-input">
+              <TextField
+                label="Patient Notes (Optional)"
+                fullWidth
+                variant="outlined"
+                id="date"
+                value={patientNotes}
+                onChange={(e) => {
+                  setPatientNotes(e.target.value);
+                }}
+              />
+            </div>
+          </div>
+
+          <Button variant="contained" onClick={handleModalSubmit}>
             Add
-          </button>
+          </Button>
         </div>
       </Modal>
     </form>
@@ -301,9 +371,6 @@ function Stepper() {
   };
 
   const handleReset = () => {
-    if (step === 1) {
-      history("/");
-    }
     setStep((prevStep) => prevStep - 1);
   };
 
@@ -313,12 +380,13 @@ function Stepper() {
       .then((res) => {
         if (res.data.success) {
           history("/");
-        } else
+        } else {
           Swal.fireal.fire({
             title: "Error",
             text: "Error occured while sending email",
             icon: "error",
           });
+        }
       })
       .catch((error) => {
         console.error("Error sending mail:", error);
@@ -330,13 +398,8 @@ function Stepper() {
   return (
     <div>
       {step === 1 && <Step1 onNext={handleNext} />}
-      {step === 2 && <Step2 onNext={handleNext} />}
+      {step === 2 && <Step2 onNext={handleNext} onPrevious={handleReset} />}
       {step === 3 && <Step3 onNext={(data) => sendMail(data)} />}
-      {step < 3 && (
-        <button onClick={handleReset} className="back-btn">
-          Back
-        </button>
-      )}
     </div>
   );
 }

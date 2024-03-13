@@ -1,0 +1,29 @@
+.bordered-div-transfer {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+  margin: 50px 410px;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+  padding: 40px;
+}
+
+.patient-div-transfer {
+  display: flex;
+}
+
+.form-div-transfer {
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+.link-color {
+  color: #1a84ff;
+  text-decoration: none;
+}
+
+.link-color:hover {
+  text-decoration: underline;
+}
+
+.transfer-form-inputs {
+  display: flex;
+}

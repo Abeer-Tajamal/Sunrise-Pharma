@@ -132,11 +132,15 @@ function Step1({ onNext }) {
         />
       </div>
       <div className="btn-div">
-        <Button variant="contained" onClick={() => history("/")}>
+        <Button
+          variant="contained"
+          color="inherit"
+          onClick={() => history("/")}
+        >
           Back
         </Button>
         &nbsp;
-        <Button variant="contained" onClick={handleSubmit}>
+        <Button variant="contained" color="success" onClick={handleSubmit}>
           NEXT
         </Button>
       </div>
@@ -212,11 +216,11 @@ function Step2({ onNext, onPrevious }) {
         </div>
       )}
       <div className="btn-div">
-        <Button variant="contained" onClick={handleBack}>
+        <Button variant="contained" color="inherit" onClick={handleBack}>
           Back
         </Button>
         &nbsp;
-        <Button variant="contained" onClick={handleSubmit}>
+        <Button variant="contained" color="success" onClick={handleSubmit}>
           Next
         </Button>
       </div>
@@ -327,7 +331,6 @@ function Step3({ onNext }) {
             </div>
             <div className="label-input">
               <TextField
-                required
                 label="RX Name"
                 fullWidth
                 variant="outlined"
@@ -376,9 +379,14 @@ function Stepper() {
 
   const sendMail = (data) => {
     axios
-      .post("http://localhost:5000/send-data", { ...formData, ...data })
+      .post("http://localhost:5000/send-refill-data", { ...formData, ...data })
       .then((res) => {
         if (res.data.success) {
+          Swal.fireal.fire({
+            title: "Data Send Successfully",
+            text: "Thank You!",
+            icon: "success",
+          });
           history("/");
         } else {
           Swal.fireal.fire({
@@ -390,9 +398,12 @@ function Stepper() {
       })
       .catch((error) => {
         console.error("Error sending mail:", error);
-        alert("Error sending mail");
+        Swal.fireal.fire({
+          title: "Error",
+          text: "Error occured while sending email",
+          icon: "error",
+        });
       });
-    console.log({ ...formData, ...data });
   };
 
   return (

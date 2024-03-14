@@ -1,10 +1,11 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
-const emailTemplate = require("./emailTemplate.js");
 const pdf = require("html-pdf");
 const fs = require("fs");
 require("dotenv").config();
+const vaccineEmailTemplate = require("./Email Templates/vaccineEmailTemplate.js");
+const refillEmailTemplate = require("./Email Templates/refillEmailTemplate.js");
 
 const app = express();
 app.use(express.json());
@@ -48,7 +49,47 @@ function readFileAsync(filePath) {
   });
 }
 
-app.post("/send-data", async (req, res) => {
+app.post("/send-vaccine-data", async (req, res) => {
+  const {
+    firstName,
+    lastName,
+    email,
+    phone,
+    selectedDate,
+    serviceType,
+    vaccineType,
+  } = req.body;
+
+  const htmlContent = vaccineEmailTemplate(
+    firstName,
+    lastName,
+    email,
+    phone,
+    selectedDate,
+    vaccineType,
+    serviceType
+  );
+
+  try {
+    // Construct email message with the received data
+    const mailOptions = {
+      from: process.env.SENDER_EMAIL,
+      to: [process.env.SENDER_EMAIL, email],
+      subject: "Vaccine Details",
+      html: htmlContent,
+    };
+
+    // Send email
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Email sent:", info.response);
+    res.status(200).json({ success: true, message: "Email sent successfully" });
+  } catch (error) {
+    console.error("Error sending email:", error);
+    res.status(500).json({ success: false, message: "Failed to send email" });
+  }
+});
+
+app.post("/send-refill-data", async (req, res) => {
   const {
     firstName,
     lastName,
@@ -60,7 +101,7 @@ app.post("/send-data", async (req, res) => {
     medicines,
   } = req.body;
 
-  const htmlContent = emailTemplate(
+  const htmlContent = refillEmailTemplate(
     firstName,
     lastName,
     email,
@@ -86,7 +127,7 @@ app.post("/send-data", async (req, res) => {
         email,
         // "00842443838@print.brother.com"
       ],
-      subject: "Refill",
+      subject: "Refill Medicine",
       html: htmlContent,
       attachments: [{ filename: "Medicine.pdf", content: pdfData }],
     };

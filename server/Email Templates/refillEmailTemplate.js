@@ -1,4 +1,4 @@
-function emailTemplate(
+function refillEmailTemplate(
   firstName,
   lastName,
   email,
@@ -107,4 +107,4 @@ function emailTemplate(
   </div>`;
 }
 
-module.exports = emailTemplate;
+module.exports = refillEmailTemplate;

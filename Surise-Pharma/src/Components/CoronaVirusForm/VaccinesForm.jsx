@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import "./VaccinesForm.css";
+import axios from "axios";
 
 const Vaccines = () => {
   const [firstName, setFirstName] = useState("");
@@ -21,16 +22,10 @@ const Vaccines = () => {
   const [selectedDate, setSelectedDate] = useState("");
   const [serviceType, setServiceType] = useState("");
 
-  // Function to check if a date is Sunday
-  const isSunday = (date) => {
-    const dayOfWeek = new Date(date).getDay();
-    return dayOfWeek === 0; // 0 represents Sunday
-  };
-
   // Function to handle date change
   const handleDateChange = (e) => {
     const selected = new Date(e.target.value);
-    if (!isSunday(selected)) {
+    if (selected.getDay() !== 0) {
       setSelectedDate(e.target.value);
     } else {
       Swal.fire({
@@ -59,12 +54,12 @@ const Vaccines = () => {
 
   const handleClick = (e) => {
     if (
-      firstName === "" ||
-      lastName === "" ||
-      email === "" ||
-      phone === "" ||
-      serviceType === "" ||
-      vaccineType === ""
+      !firstName ||
+      !lastName ||
+      !email ||
+      !phone ||
+      !serviceType ||
+      !vaccineType
     ) {
       Swal.fire({
         title: "Warning",
@@ -72,18 +67,46 @@ const Vaccines = () => {
         icon: "warning",
       });
     } else {
-      Swal.fire({
-        title: "Success",
-        text: "Thank you!",
-        icon: "success",
-      });
-      setFirstName("");
-      setLastName("");
-      setEmail("");
-      setPhone("");
-      setSelectedDate("");
-      setServiceType("");
-      setVaccineType("");
+      axios
+        .post("http://localhost:5000/send-vaccine-data", {
+          firstName,
+          lastName,
+          email,
+          phone,
+          selectedDate,
+          serviceType,
+          vaccineType,
+        })
+        .then((res) => {
+          if (res.data.success) {
+            Swal.fire({
+              title: "Success",
+              text: "Thank you!",
+              icon: "success",
+            });
+            setFirstName("");
+            setLastName("");
+            setEmail("");
+            setPhone("");
+            setSelectedDate("");
+            setServiceType("");
+            setVaccineType("");
+          } else {
+            Swal.fireal.fire({
+              title: "Error",
+              text: "Error occured while sending email",
+              icon: "error",
+            });
+          }
+        })
+        .catch((error) => {
+          console.error("Error Sending Email: ", error);
+          Swal.fireal.fire({
+            title: "Error",
+            text: "Error occured while sending email",
+            icon: "error",
+          });
+        });
     }
   };
 
@@ -208,7 +231,7 @@ const Vaccines = () => {
         </div>
       )}
 
-      <Button variant="contained" onClick={handleClick}>
+      <Button variant="contained" color="success" onClick={handleClick}>
         Submit
       </Button>
     </div>

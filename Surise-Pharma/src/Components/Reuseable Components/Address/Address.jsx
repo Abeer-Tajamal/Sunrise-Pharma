@@ -7,11 +7,10 @@ import "./Address.css";
 const Address = () => {
   return (
     <div className="container">
-      <div>
-        <strong>Welcome To Sunrise Pharmacy</strong>
-      </div>
+      <strong>Welcome To Sunrise Pharmacy</strong>
+
       <div className="flexDisplay">
-        <LocationOnIcon fontSize="small" />
+        <LocationOnIcon />
         <Link
           to="https://goo.gl/maps/gRCqUduCEt3FBXvn6"
           target="_blank"
@@ -24,7 +23,7 @@ const Address = () => {
       </div>
 
       <div className="flexDisplay">
-        <PhoneIcon fontSize="small" />
+        <PhoneIcon />
         <strong>
           &nbsp;Phone:&nbsp;
           <Link to="tel:475-209-9284" className="map-link">
@@ -34,7 +33,7 @@ const Address = () => {
       </div>
 
       <div className="flexDisplay">
-        <AccessTimeIcon fontSize="small" />
+        <AccessTimeIcon />
         &nbsp;
         <strong>Mon-Fri: 9a.m.-6p.m. | Sat: 9a.m.-2p.m. | Sun: Closed</strong>
       </div>

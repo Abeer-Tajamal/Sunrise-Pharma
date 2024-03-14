@@ -6,6 +6,7 @@ const fs = require("fs");
 require("dotenv").config();
 const vaccineEmailTemplate = require("./Email Templates/vaccineEmailTemplate.js");
 const refillEmailTemplate = require("./Email Templates/refillEmailTemplate.js");
+const transferEmailTemplate = require("./Email Templates/transferEmailTemplate.js");
 
 const app = express();
 app.use(express.json());
@@ -76,6 +77,50 @@ app.post("/send-vaccine-data", async (req, res) => {
       from: process.env.SENDER_EMAIL,
       to: [process.env.SENDER_EMAIL, email],
       subject: "Vaccine Details",
+      html: htmlContent,
+    };
+
+    // Send email
+    const info = await transporter.sendMail(mailOptions);
+    console.log("Email sent:", info.response);
+    res.status(200).json({ success: true, message: "Email sent successfully" });
+  } catch (error) {
+    console.error("Error sending email:", error);
+    res.status(500).json({ success: false, message: "Failed to send email" });
+  }
+});
+
+app.post("/send-transfer-data", async (req, res) => {
+  const {
+    firstName,
+    lastName,
+    dateofBirth,
+    phone,
+    previouspharmacyLocation,
+    pharmacyName,
+    pharmacyNumber,
+    pharmacyNotes,
+    medicines,
+  } = req.body;
+
+  const htmlContent = transferEmailTemplate(
+    firstName,
+    lastName,
+    dateofBirth,
+    phone,
+    previouspharmacyLocation,
+    pharmacyName,
+    pharmacyNumber,
+    pharmacyNotes,
+    medicines
+  );
+
+  try {
+    // Construct email message with the received data
+    const mailOptions = {
+      from: process.env.SENDER_EMAIL,
+      to: process.env.SENDER_EMAIL,
+      subject: "Transfer Details",
       html: htmlContent,
     };
 

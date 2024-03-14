@@ -1,11 +1,12 @@
 function transferEmailTemplate(
   firstName,
   lastName,
-  email,
-  phone,
   dateofbirth,
-  deliverType,
-  address,
+  phone,
+  previouspharmacyLocation,
+  pharmacyName,
+  pharmacyNumber,
+  pharmacyNotes,
   medicines
 ) {
   return `<div style="padding: 20px; background-color: #ffffff; border-radius: 10px">
@@ -37,32 +38,15 @@ function transferEmailTemplate(
       <td style="border: 2px solid black">${dateofbirth}</td>
       </tr>
       <tr>
-      <td style="border: 2px solid black">Email Address:</td>
-      <td style="border: 2px solid black">${email}</td>
-      </tr>
-      <tr>
       <td style="border: 2px solid black">Phone Number:</td>
       <td style="border: 2px solid black">${phone}</td>
-      </tr>
-      </table>
-      <table>
-      <tr>
-      <th>REFILL DETAILS</th>
-      </tr>
-      <tr>
-      <td style="border: 2px solid black">Date Sent:</td>
-      <td style="border: 2px solid black">${new Date()}</td>
-      </tr>
-      <tr>
-      <td style="border: 2px solid black">Source:</td>
-      <td style="border: 2px solid black">Website</td>
       </tr>
       </table>
       </div>
       <div style="display: flex; justify-content: flex-start">
       <table>
       <tr>
-      <th>SUBMITTED PRESCRIPTIONS</th>
+      <th>TRANSFER PRESCRIPTIONS</th>
       </tr>
       ${medicines.map((item) => {
         return `<tr>
@@ -72,10 +56,6 @@ function transferEmailTemplate(
         <tr>
         <td style="border: 2px solid black">Medication</td>
         <td style="border: 2px solid black">${item.name}</td>
-        </tr>
-        <tr>
-        <td style="border: 2px solid black">Patient Notes</td>
-        <td style="border: 2px solid black">${item.notes}</td>
         </tr>`;
       })}
       </table>
@@ -83,15 +63,23 @@ function transferEmailTemplate(
       <div style="display: flex; justify-content: space-around">
       <table>
       <tr>
-      <th>DELIVERY METHOD</th>
+      <th>PREVIOUS PHARMACY DETAILS</th>
       </tr>
       <tr>
-      <td style="border: 2px solid black">Method:</td>
-      <td style="border: 2px solid black">${deliverType}</td>
+      <td style="border: 2px solid black">Pharmacy Location:</td>
+      <td style="border: 2px solid black">${previouspharmacyLocation}</td>
       </tr>
       <tr>
-        <td style="border: 2px solid black">Address:</td>
-        <td style="border: 2px solid black">${address}</td>
+        <td style="border: 2px solid black">Pharmacy Name:</td>
+        <td style="border: 2px solid black">${pharmacyName}</td>
+        </tr>
+      <tr>
+        <td style="border: 2px solid black">Pharmacy Number:</td>
+        <td style="border: 2px solid black">${pharmacyNumber}</td>
+        </tr>
+      <tr>
+        <td style="border: 2px solid black">Notes For Pharmacy:</td>
+        <td style="border: 2px solid black">${pharmacyNotes}</td>
         </tr>
         </table>
     </div>

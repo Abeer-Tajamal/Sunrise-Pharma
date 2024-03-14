@@ -235,15 +235,11 @@ function Step3({ onNext }) {
   const [medicineName, setMedicineName] = useState("");
   const [patientNotes, setPatientNotes] = useState("");
 
-  const handleAddMedicine = () => {
-    setOpen(true);
-  };
-
   const handleModalSubmit = () => {
-    if (medicineNumber > 99999 || medicineNumber < 40000)
+    if (medicineNumber > 999999 || medicineNumber < 40000)
       Swal.fire({
         title: "Warning",
-        text: "Rx Number must be between 39999 and 99999",
+        text: "Rx Number must be between 39999 and 999999",
         icon: "warning",
       });
     else {
@@ -300,7 +296,7 @@ function Step3({ onNext }) {
       <br />
       <div style={{ display: "flex", justifyContent: "space-evenly" }}>
         <div>
-          <Button variant="contained" onClick={handleAddMedicine}>
+          <Button variant="contained" onClick={() => setOpen(true)}>
             Add Medicine
           </Button>
         </div>
@@ -382,14 +378,14 @@ function Stepper() {
       .post("http://localhost:5000/send-refill-data", { ...formData, ...data })
       .then((res) => {
         if (res.data.success) {
-          Swal.fireal.fire({
+          Swal.fire({
             title: "Data Send Successfully",
             text: "Thank You!",
             icon: "success",
           });
           history("/");
         } else {
-          Swal.fireal.fire({
+          Swal.fire({
             title: "Error",
             text: "Error occured while sending email",
             icon: "error",
@@ -398,7 +394,7 @@ function Stepper() {
       })
       .catch((error) => {
         console.error("Error sending mail:", error);
-        Swal.fireal.fire({
+        Swal.fire({
           title: "Error",
           text: "Error occured while sending email",
           icon: "error",

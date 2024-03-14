@@ -92,7 +92,7 @@ const Vaccines = () => {
             setServiceType("");
             setVaccineType("");
           } else {
-            Swal.fireal.fire({
+            Swal.fire({
               title: "Error",
               text: "Error occured while sending email",
               icon: "error",
@@ -101,7 +101,7 @@ const Vaccines = () => {
         })
         .catch((error) => {
           console.error("Error Sending Email: ", error);
-          Swal.fireal.fire({
+          Swal.fire({
             title: "Error",
             text: "Error occured while sending email",
             icon: "error",

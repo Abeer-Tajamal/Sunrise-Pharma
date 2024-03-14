@@ -27,3 +27,16 @@
 .transfer-form-inputs {
   display: flex;
 }
+
+.two-inputs-transfer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.label-input-transfer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 20px;
+}

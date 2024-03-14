@@ -2,16 +2,22 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import {
   Button,
+  Checkbox,
   FormControl,
+  FormControlLabel,
   InputLabel,
   MenuItem,
+  Modal,
   Select,
   TextField,
   Typography,
 } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
+import MessageIcon from "@mui/icons-material/Message";
+import LocalPharmacyIcon from "@mui/icons-material/LocalPharmacy";
 import "./TransferPrescription.css";
+import axios from "axios";
 
 const TransferPrescription = () => {
   const [firstName, setFirstName] = useState("");
@@ -21,6 +27,12 @@ const TransferPrescription = () => {
   const [previouspharmacyLocation, setPreviousPharmacyLocation] = useState("");
   const [pharmacyName, setPharmacyName] = useState("");
   const [pharmacyNumber, setPharmacyNumber] = useState("");
+  const [pharmacyNotes, setPharmacyNotes] = useState("");
+  const [medicines, setMedicines] = useState([]);
+  const [medicineNumber, setMedicineNumber] = useState("");
+  const [medicineName, setMedicineName] = useState("");
+  const [open, setOpen] = useState(false);
+  const [ischecked, setIsChecked] = useState(true);
 
   const formatMobileNumber = (input) => {
     // Remove any non-numeric characters
@@ -37,13 +49,33 @@ const TransferPrescription = () => {
     return formattedNumber;
   };
 
+  const handleModalSubmit = () => {
+    if (medicineNumber > 999999 || medicineNumber < 40000)
+      Swal.fire({
+        title: "Warning",
+        text: "Rx Number must be between 39999 and 999999",
+        icon: "warning",
+      });
+    else {
+      setMedicines([
+        ...medicines,
+        { number: medicineNumber, name: medicineName },
+      ]);
+      setMedicineNumber("");
+      setMedicineName("");
+      setOpen(false);
+    }
+  };
+
   const handleClick = (e) => {
     if (
-      firstName === "" ||
-      lastName === "" ||
-      dateofBirth === "" ||
-      phone === "" ||
-      previouspharmacyLocation === ""
+      !firstName ||
+      !lastName ||
+      !dateofBirth ||
+      !phone ||
+      !pharmacyName ||
+      !pharmacyNumber ||
+      !previouspharmacyLocation
     ) {
       Swal.fire({
         title: "Warning",
@@ -51,16 +83,50 @@ const TransferPrescription = () => {
         icon: "warning",
       });
     } else {
-      Swal.fire({
-        title: "Success",
-        text: "Thank you!",
-        icon: "success",
-      });
-      setFirstName("");
-      setLastName("");
-      setDateofBirth("");
-      setPhone("");
-      setPreviousPharmacyLocation("");
+      axios
+        .post("http://localhost:5000/send-transfer-data", {
+          firstName,
+          lastName,
+          dateofBirth,
+          phone,
+          previouspharmacyLocation,
+          pharmacyName,
+          pharmacyNumber,
+          pharmacyNotes,
+          medicines,
+        })
+        .then((res) => {
+          if (res.data.success) {
+            Swal.fire({
+              title: "Success",
+              text: "Thank you!",
+              icon: "success",
+            });
+            setFirstName("");
+            setLastName("");
+            setDateofBirth("");
+            setPhone("");
+            setPreviousPharmacyLocation("");
+            setPharmacyName("");
+            setPharmacyNumber("");
+            setPharmacyNotes("");
+            setMedicines([]);
+          } else {
+            Swal.fire({
+              title: "Error",
+              text: "Error occured while sending email",
+              icon: "error",
+            });
+          }
+        })
+        .catch((error) => {
+          console.error("Error Sending Email: ", error);
+          Swal.fire({
+            title: "Error",
+            text: "Error occured while sending email",
+            icon: "error",
+          });
+        });
     }
   };
 
@@ -142,7 +208,7 @@ const TransferPrescription = () => {
       <div className="patient-div-transfer">
         <FormControl sx={{ minWidth: 615 }}>
           <InputLabel id="pharmacyLocation">New Pharmacy Location</InputLabel>
-          <Select label="New Pharmacy Location" disabled>
+          <Select label="New Pharmacy Location">
             <MenuItem value="Sunrise Pharmacy">Sunrise Pharmacy</MenuItem>
           </Select>
         </FormControl>
@@ -183,14 +249,128 @@ const TransferPrescription = () => {
             value={pharmacyNumber}
             fullWidth
             onChange={(e) => {
-              setPharmacyNumber(e.target.value);
+              setPharmacyNumber(formatMobileNumber(e.target.value));
             }}
           />
         </div>
       </div>
       <br />
+      <div className="patient-div-transfer">
+        <LocalPharmacyIcon color="action" />
+        &nbsp;
+        <Typography gutterBottom variant="h6">
+          Prescriptions
+        </Typography>
+      </div>
+      <div>
+        <Typography>
+          Add the medication name and Rx number for all that you'd like to
+          transfer
+        </Typography>
+        <FormControlLabel
+          control={
+            <Checkbox
+              color="success"
+              checked={ischecked}
+              onChange={(e) => {
+                setIsChecked(e.target.checked);
+              }}
+            />
+          }
+          label="Transfer all of my medications"
+        />
+        {!ischecked && (
+          <div>
+            {medicines.map((medicine, index) => (
+              <div key={index} style={{ width: "100%" }}>
+                <div className="two-inputs-transfer">
+                  <div className="label-input-transfer">
+                    <TextField
+                      type="number"
+                      label="Rx Number"
+                      variant="outlined"
+                      value={medicine.number}
+                    />
+                  </div>
+                  <div className="label-input-transfer">
+                    <TextField
+                      label="Rx Name"
+                      variant="outlined"
+                      value={medicine.name}
+                    />
+                  </div>
+                </div>
+              </div>
+            ))}
+            <br />
+            <div>
+              <Button
+                variant="outlined"
+                color="success"
+                onClick={() => setOpen(true)}
+              >
+                Add Medicine
+              </Button>
+            </div>
+          </div>
+        )}
+        <Modal open={open} onClose={() => setOpen(false)}>
+          <div className="modal-content">
+            <h2>Add Medicine</h2>
+            <div className="two-inputs-transfer">
+              <div className="label-input-transfer">
+                <TextField
+                  required
+                  type="number"
+                  label="RX Number"
+                  variant="outlined"
+                  value={medicineNumber}
+                  onChange={(e) => {
+                    setMedicineNumber(e.target.value);
+                  }}
+                />
+              </div>
+              <div className="label-input-transfer">
+                <TextField
+                  label="RX Name"
+                  variant="outlined"
+                  value={medicineName}
+                  onChange={(e) => {
+                    setMedicineName(e.target.value);
+                  }}
+                />
+              </div>
+            </div>
+
+            <Button variant="contained" onClick={handleModalSubmit}>
+              Add
+            </Button>
+          </div>
+        </Modal>
+      </div>
       <br />
-      <Button variant="contained" onClick={handleClick}>
+      <div className="patient-div-transfer">
+        <MessageIcon color="action" />
+        &nbsp;
+        <Typography gutterBottom variant="h6">
+          Notes For Pharmacy (Optional)
+        </Typography>
+      </div>
+      <div className="patient-div-transfer">
+        <TextField
+          placeholder="Questions & Comments"
+          multiline
+          rows={4}
+          fullWidth
+          value={pharmacyNotes}
+          onChange={(e) => {
+            setPharmacyNotes(e.target.value);
+          }}
+        />
+      </div>
+      <br />
+      <br />
+      <Button variant="contained" color="success" onClick={handleClick}>
         Submit
       </Button>
     </div>

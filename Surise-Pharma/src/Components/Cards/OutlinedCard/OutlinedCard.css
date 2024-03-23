@@ -4,3 +4,9 @@
   background-color: white;
   padding: 50px;
 }
+
+@media only screen and (max-width: 980px) {
+  .containerDiv {
+    flex-wrap: wrap;
+  }
+}

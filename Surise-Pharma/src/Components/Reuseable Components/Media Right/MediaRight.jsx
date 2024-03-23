@@ -14,7 +14,6 @@ const ImageDetails = ({
   return (
     <div className="image-details">
       <div className="image-details-details">
-        <h2 className="image-details-title">{title}</h2>
         <p className="image-details-description">{description}</p>
         <p className="image-details-description">{description2}</p>
         <p className="image-details-description">{description3}</p>

@@ -82,22 +82,6 @@ const Footer = () => {
                 <span className="underlineFooterText">About</span>
               </Link>
             </li>
-            {/* <li className="underlineFooterText">
-              <Link
-                to="/pharmacy"
-                style={{ textDecoration: "none", color: "#0d58a6" }}
-              >
-                <span className="underlineFooterText">Service</span>
-              </Link>
-            </li>
-            <li className="underlineFooterText">
-              <Link
-                to="/contact"
-                style={{ textDecoration: "none", color: "#0d58a6" }}
-              >
-                <span className="underlineFooterText">Contact</span>
-              </Link>
-            </li> */}
             <li className="underlineFooterText">
               <Link
                 to="/refill"

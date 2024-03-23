@@ -32,3 +32,50 @@
   text-align: left;
   width: 800px;
 }
+
+.image-container-home {
+  display: flex;
+}
+
+@media only screen and (max-width: 850px) {
+  .mediaRight {
+    margin: 20px 30px;
+  }
+
+  .CareSection h2,
+  .CareSection p {
+    margin: 0px 30px;
+  }
+
+  .image-container-home {
+    flex-direction: column;
+  }
+
+  .round-image {
+    margin: 10px 10px;
+  }
+
+  .inner-text-heading {
+    width: 500px;
+    font-size: 40px;
+  }
+
+  #second-image {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .inner-text-heading {
+    width: 320px;
+    font-size: 30px;
+  }
+
+  .mediaRight {
+    flex-direction: column-reverse;
+  }
+
+  #second-image {
+    display: none;
+  }
+}

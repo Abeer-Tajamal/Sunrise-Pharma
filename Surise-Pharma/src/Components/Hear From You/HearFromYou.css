@@ -32,3 +32,21 @@
 .underline-text:hover {
   text-decoration: underline;
 }
+
+@media only screen and (max-width: 980px) {
+  .hear-section {
+    background-size: initial;
+  }
+
+  .love-to-hear-section {
+    margin: 0px;
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .love-to-hear-section {
+    margin: 0px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}

@@ -3,3 +3,9 @@
   justify-content: space-evenly;
   background-color: white;
 }
+
+@media only screen and (max-width: 980px) {
+  .containerDivMediaCard {
+    flex-wrap: wrap;
+  }
+}

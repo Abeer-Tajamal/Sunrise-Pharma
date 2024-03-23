@@ -35,7 +35,9 @@ const Address = () => {
       <div className="flexDisplay">
         <AccessTimeIcon />
         &nbsp;
-        <strong>Mon-Fri: 9a.m.-6p.m. | Sat: 9a.m.-2p.m. | Sun: Closed</strong>
+        <strong>Mon-Fri: 9a.m.-6p.m.</strong>
+        <strong>| Sat: 9a.m.-2p.m.</strong>
+        <strong>| Sun: Closed</strong>
       </div>
     </div>
   );

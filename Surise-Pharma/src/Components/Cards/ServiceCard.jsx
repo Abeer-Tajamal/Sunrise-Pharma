@@ -1,4 +1,5 @@
 import ServiceCard from "../Reuseable Components/Cards/Media Cards/MediaCards";
+import "./ServiceCard.css";
 
 const Services = () => {
   const ServiceCard1 = {
@@ -23,7 +24,7 @@ const Services = () => {
   };
 
   return (
-    <div style={{ display: "flex", justifyContent: "space-around" }}>
+    <div className="service-card-container">
       <ServiceCard {...ServiceCard1} />
       <ServiceCard {...ServiceCard2} />
       <ServiceCard {...ServiceCard3} />

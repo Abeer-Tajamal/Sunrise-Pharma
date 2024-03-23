@@ -10,20 +10,25 @@ const CareBeyondDrugs = () => {
         </p>
         <div className="mediaRight">
           <div>
-            At Sunrise Pharmacy, we are firm believers in the essence of being a local independent
-            pharmacy, offering personalized healthcare and medication services tailored to the unique
-            needs of our patients. Pay us a visit today, and allow us the opportunity to take care of you.
+            At Sunrise Pharmacy, we are firm believers in the essence of being a
+            local independent pharmacy, offering personalized healthcare and
+            medication services tailored to the unique needs of our patients.
+            Pay us a visit today, and allow us the opportunity to take care of
+            you.
           </div>
-          <img
-            className="round-image"
-            src="./Assets/Home Page/Screen Shot 1.png"
-            alt=""
-          />
-          <img
-            className="round-image"
-            src="./Assets/Home Page/Screen Shot 2.png"
-            alt=""
-          />
+          <div className="image-container-home">
+            <img
+              className="round-image"
+              src="./Assets/Home Page/Screen Shot 1.png"
+              alt=""
+            />
+            <img
+              className="round-image"
+              id="second-image"
+              src="./Assets/Home Page/Screen Shot 2.png"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </>

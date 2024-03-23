@@ -12,10 +12,11 @@
 
 .insider-section div {
   text-align: center;
-  align-items: center;
 }
 
-.insider-section input {
-  height: 35px;
-  width: 250px;
+@media only screen and (max-width: 980px) {
+  .pharmacy-insider-content {
+    text-align: center;
+    margin: 10px;
+  }
 }

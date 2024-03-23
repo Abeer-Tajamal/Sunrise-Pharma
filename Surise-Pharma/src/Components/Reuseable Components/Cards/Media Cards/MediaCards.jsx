@@ -6,10 +6,7 @@ import "./MediaCards.css";
 
 const MediaCard = ({ image, title, description }) => {
   return (
-    <Card
-      sx={{ maxWidth: 345 }}
-      style={{ backgroundColor: "white", textAlign: "center" }}
-    >
+    <Card sx={{ maxWidth: 345, margin: 1 }} style={{ textAlign: "center" }}>
       <div>
         <CardMedia
           className="card-img"

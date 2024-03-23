@@ -3,9 +3,14 @@ import AboutCard from "../../Reuseable Components/Cards/PaperCards";
 
 const AboutCards = () => {
   const item1 = [
-    { xs: 6, md: 6, title: "Free Delivery", content: "We'll come to your location." },
     {
-      xs: 6,
+      xs: 12,
+      md: 6,
+      title: "Free Delivery",
+      content: "We'll come to your location.",
+    },
+    {
+      xs: 12,
       md: 6,
       title: "Refill Fast",
       content: "Wait times under 10 minutes.",
@@ -14,13 +19,13 @@ const AboutCards = () => {
 
   const item2 = [
     {
-      xs: 6,
+      xs: 12,
       md: 6,
       title: "Personalized Care",
       content: "When you make a call, you'll talk to an actual person.",
     },
     {
-      xs: 6,
+      xs: 12,
       md: 6,
       title: "Locally Owned",
       content: "Dedicated to the community since 2021.",

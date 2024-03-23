@@ -10,3 +10,13 @@
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
   width: 350px;
 }
+
+@media only screen and (max-width: 980px) {
+  .outer-container-contact {
+    flex-wrap: wrap;
+  }
+
+  .inner-container-contact {
+    margin: 10px;
+  }
+}

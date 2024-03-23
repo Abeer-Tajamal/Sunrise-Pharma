@@ -7,3 +7,15 @@
   width: 100%;
   border: none;
 }
+
+@media only screen and (max-width: 980px) {
+  .mapCSSSettings {
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .containerMap {
+    padding: 30px;
+  }
+}
